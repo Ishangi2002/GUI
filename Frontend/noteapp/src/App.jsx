@@ -10,6 +10,7 @@ function App() {
             <h1 className="text-2xl ">Tailwind CSS is Working!</h1>
             <p>This background should be blue, and the text white.</p>
             <p>hii</p>
+            <p>hiiiiii</p>
     </div>
   );
 }
