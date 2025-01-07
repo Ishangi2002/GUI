@@ -4,23 +4,23 @@ import { Link } from "react-router-dom";
 const LandingPage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-            <h1 className="text-5xl font-extrabold text-blue-600 mb-6">Welcome to NoteMate!</h1>
+            <h1 className="text-5xl font-extrabold text-[#7321A6] mb-6">Welcome to NoteMate!</h1>
       
-    <p className="text-lg text-gray-600 text-center mb-8">
+    <p className="text-lg text-gray-600 text-center mb-8 font-bold">
             Your personal note-taking companion. Organize your thoughts and ideas easily!
     </p>
 
      
-    <div className="flex gap-6">
+    <div className="flex gap-12">
         <Link 
           to="/login" 
-          className="bg-blue-600 text-white px-8 py-4 rounded-xl text-lg hover:bg-blue-700 transition duration-300"
+          className="bg-[#7321A6] text-white px-6 py-3 rounded-xl text-lg hover:bg-[#621A8E] transition duration-300  "
         >
           Login
         </Link>
         <Link 
           to="/signup" 
-          className="bg-green-600 text-white px-8 py-4 rounded-xl text-lg hover:bg-green-700 transition duration-300"
+          className="bg-white text-gray px-6 py-3 rounded-xl text-lg hover:bg-[#D8BFD8] transition duration-300 border-2 border-[#7321A6] hover:border-[#621A8E] "
         >
           Sign Up
         </Link>

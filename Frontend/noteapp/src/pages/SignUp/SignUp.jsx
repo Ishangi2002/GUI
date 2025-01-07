@@ -31,6 +31,25 @@ const SignUp = () => {
                 setError("")
 
                 //SignUp API Call
+                try {
+                    const response = await axiosInstance.post("/login",{
+                        email: email,
+                        password: password,
+                    });
+        
+                //Handle Successful login response
+                if(response.data && response.data.accessToken){
+                    localStorage.setItem("token",response.data.accessToken)
+                    navigate('/dashboard')
+                }
+                } catch (error) {
+                    //Handle login error
+                    if(error.response && error.response.data && error.response.data.message) {
+                        setError(error.response.data.message);
+                    } else {
+                        setError("An unexpected error occured.Please try again.");
+                    }
+                }
         };
 
     
@@ -65,7 +84,7 @@ const SignUp = () => {
 
                     {error && <p className="text-red-500  text-xs pb-1">{error} </p>}
 
-                    <button type="submit" className="btn-primary">Create Account</button>
+                    <button type="submit" className="btn-primary bg-[#7321A6] text-white text-lg hover:bg-[#621A8E] transition-colors duration-300">Create Account</button>
                     <p className="text-sm text-center mt-4">
                         Already have an account?{" "}
                         <Link to="/Login" className="font-medium text-primary underline">Login</Link>

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PasswordInput from "../../components/input/passwordinput";
 import { validateEmail } from "../../utils/helper";
+import axiosInstance from "../../utils/axiosInstance";
 
 
 
@@ -11,6 +12,8 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const[password, setPassword] = useState("");
     const[error, setError] = useState(null);
+
+    const navigate = useNavigate()
 
     const handleLogin = async(e) =>{
         e.preventDefault();
@@ -27,6 +30,26 @@ const Login = () => {
         setError("")
 
         //Login API Call
+        try {
+            const response = await axiosInstance.post("api/auth/login",{
+                email: email,
+                password: password,
+            });
+
+        //Handle Successful login response
+        if(response.data && response.data.token){
+            localStorage.setItem("token",response.data.token)
+            localStorage.setItem("id",response.data.id)
+            navigate('/dashboard')
+        }
+        } catch (error) {
+            //Handle login error
+            if(error.response && error.response.data && error.response.data.message) {
+                setError(error.response.data.message);
+            } else {
+                setError("An unexpected error occured.Please try again.");
+            }
+        }
     };
 
 
@@ -51,7 +74,7 @@ const Login = () => {
 
                     {error && <p className="text-red-500  text-xs pb-1">{error} </p>}
 
-                    <button type="submit" className="btn-primary">Login</button>
+                    <button type="submit" className="btn-primary bg-[#7321A6] text-white text-lg hover:bg-[#621A8E] transition-colors duration-300">Login</button>
                     <p className="text-sm text-center mt-4">
                         Not Registered Yet?{" "}
                         <Link to="/SignUp" className="font-medium text-primary underline">Create an Account</Link>
