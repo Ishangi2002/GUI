@@ -2,8 +2,8 @@ import { db } from "../db.js";
 
 // Add a new note
 export const addNote = (req, res) => {
-  const q = "INSERT INTO note(title, content, user_id) VALUES (?)";
-  const values = [req.body.title, req.body.content, req.body.user_id];
+  const q = "INSERT INTO note(title, content, user_id,tags) VALUES (?)";
+  const values = [req.body.title, req.body.content, req.body.user_id,req.body.tags];
 
   db.query(q, [values], (err, data) => {
     if (err) return res.status(500).json(err);
@@ -13,9 +13,9 @@ export const addNote = (req, res) => {
 
 // Get all notes
 export const getNotes = (req, res) => {
-    const q = "SELECT * FROM note";
+    const q = "SELECT * FROM note where user_id=?";
   
-    db.query(q, (err, data) => {
+    db.query(q,[req.params.userId] , (err, data) => {
       if (err) return res.status(500).json(err);
       return res.status(200).json(data);
     });
@@ -34,8 +34,8 @@ export const getNoteId = (req, res) => {
   
   // Update a note by ID
   export const updateNotes = (req, res) => {
-    const q = "UPDATE note SET title = ?, content = ? updated_at = CURRENT_TIMESTAMP WHERE id = ?";
-    const values = [req.body.title, req.body.content, req.body.id];
+    const q = "UPDATE note SET title = ?, content = ?, tags=?, updated_at = CURRENT_TIMESTAMP WHERE id = ?";
+    const values = [req.body.title, req.body.content,req.body.tags,req.params.noteId];
   
     db.query(q, values, (err, data) => {
       if (err) return res.status(500).json(err);
@@ -48,7 +48,7 @@ export const getNoteId = (req, res) => {
   export const deleteNotes = (req, res) => {
     const q = "DELETE FROM note WHERE id = ?";
   
-    db.query(q, [req.body.id], (err, data) => {
+    db.query(q, [req.params.noteId], (err, data) => {
       if (err) return res.status(500).json(err);
       if (data.affectedRows === 0) return res.status(404).json("Note not found!");
       return res.status(200).json("Note has been deleted successfully.");

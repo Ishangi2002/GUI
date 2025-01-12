@@ -6,6 +6,9 @@ import AddEditNotes from "./AddEditNotes";
 import Modal from "react-modal";
 import { useNavigate } from "react-router-dom";
 import axiosInstance from "../../utils/axiosInstance";
+import moment from "moment";
+import Toast from "../../components/ToastMessage/Toast";
+
 
 const Home = () => {
 
@@ -15,8 +18,36 @@ const Home = () => {
         data: null,
     });
 
+    const [showToastMsg,setShowToastMsg] = useState({
+        isShown:false,
+        message: "",
+        type: "add",
+    });
+
+    const [notes,setNotes] = useState([]);
     const [userInfo,setUserInfo] = useState(null);
+
     const navigate = useNavigate();
+
+    const handleEdit = (noteDetails) => {
+        setOpenAddEditModal({isShown: true, data: noteDetails, type:"edit"});
+    };
+
+    const showToastMessage = (message,type) =>{
+        setShowToastMsg({
+            isShown:true,
+            message,
+            type,
+        });
+    };
+
+
+    const handleCloseToast = () =>{
+        setShowToastMsg({
+            isShown:false,
+            message: "",
+        });
+    };
 
     //Get user info
     const getUserInfo =  async () => {
@@ -34,37 +65,79 @@ const Home = () => {
         }
     };
 
+    //Get all notes
+    const getNotes = async () => {
+        try{
+            const id = localStorage.getItem("id");
+            const response = await axiosInstance.get(`api/note/getNotes/${id}`);
+                setNotes(response.data);
+                
+            
+        
+        }catch(error){
+            console.log("An unexpected error occured.Please try again later.");
+        }
+    }
+
+    //Delete Notes
+    const deleteNotes = async (data) => {
+        const noteId = data.id;
+       
+    try{
+      const response = await axiosInstance.delete(`api/note/deleteNotes/${noteId}`);
+      if (response.data && !response.data.error){
+        showToastMessage("Note Deleted Successfully", 'delete');
+        getNotes();
+      }
+    } catch(error) {
+      if(
+        error.response &&
+        error.response.data &&
+        error.response.data.message
+      ){
+        console.log("An unexpected error occured.Please try again later.");
+      }
+    }
+    }
 
     useEffect(()=> {
+        getNotes();
         getUserInfo();
-    }, [])
+   
+    }, []);
 
     useEffect(() => {
         setUserInfo(userInfo);
     }, [userInfo]);
+    
+    
 
-
-    if (!userInfo) {
+    if (!userInfo ) {
         return <div>Loading...</div>;
     }
+
 
     return (
         <>
             <Navbar userInfo={userInfo}/>
             <div className="container mx-auto">
                 <div className="grid grid-cols-3 gap-4 mt-8">
-                    <NoteCard 
-                        title="Meeting on 7th January"
-                        date="3rd January 2025"
-                        content="Meeting on 7th January"
-                        tags="#meeting"
-                        isPinned={() => {}}
-                        onEdit={() => {}}
-                        onDelete={() => {}}
+                    
+                    {notes.map((item,index)=> (
+                        <NoteCard 
+                        key={item.id }
+                        title={item.title}
+                        date={item.created_at}
+                        content={item.content}
+                        tags={item.tags}
+                        //isPinned={item.isPinned}
+                        onEdit={() => handleEdit(item)}
+                        onDelete={() => deleteNotes(item)}
                         onPinNote={() => {}}
-                    /> 
-                </div>
-            </div>
+                        /> 
+                    ))}
+        </div>
+        </div>
 
             <button className="w-16 h-16 flex items-center justify-center rounded-2xl bg-primary hover:bg-blue-600 absolute right-10 bottom-10" 
                 onClick={() => {
@@ -84,8 +157,24 @@ const Home = () => {
                 contentLabel=""
                 className="w-[40%] max-h-3/4 bg-white rounded-md mx-auto mt-14 p-5 overflow-scroll"
             >
-                <AddEditNotes />
+                <AddEditNotes 
+                    type={openAddEditModal.type}
+                    noteData={openAddEditModal.data}
+                    onClose={() => {
+                        setOpenAddEditModal({isShown: false, type:"add",data: null});
+                    }}
+                    getNotes={getNotes}
+                    user_id={userInfo.id}
+                    showToastMessage={showToastMessage}
+                />
             </Modal>
+
+            <Toast
+                isShown={showToastMsg.isShown}
+                message={showToastMsg.message}
+                type={showToastMsg.type}
+                onClose={handleCloseToast}
+            />
         </>
     );
 };

@@ -5,9 +5,9 @@ import { addNote,getNotes,getNoteId,updateNotes,deleteNotes } from "../Controlle
 const router = express.Router()
 
 router.post("/addNote", addNote);
-router.get ("/", getNotes);
+router.get ("/getNotes/:userId", getNotes);
 router.get ("/getNotes/:Id" , getNoteId);
-router.put ("/updateNotes", updateNotes);
-router.delete ("/deleteNotes", deleteNotes);
+router.put ("/updateNotes/:noteId", updateNotes);
+router.delete ("/deleteNotes/:noteId", deleteNotes);
 
 export default router
