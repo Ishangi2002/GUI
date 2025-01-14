@@ -26,9 +26,11 @@ const NoteCard = ({
             <p className="text-xs text-slate-600 mt-2">{content?.slice(0, 60)}</p>
             <div className="flex items-center justify-between mt-2">
             
-            <div className="text-xs text-slate-500">{Array.isArray(tags) ? tags.map((item, index) => <span key={index}>#{item} </span>) : null}</div> 
-            
-            {/* <div className="text-xs text-slate-500">{tags.map((item)=>`#${item}`)}</div> */}
+            <div className="flex flex-wrap gap-1">
+                    {tags ? tags.split(',').map((item,index)=> (
+                        <span key ={index} className="text-xs text-slate-500 bg-gray-200 rounded-full px-2 py-1">#{item}</span>
+                    )): null }
+            </div>
             <div className="flex items-center gap-2">
                 <MdCreate
                     className="icon-btn hover:text-green-600"

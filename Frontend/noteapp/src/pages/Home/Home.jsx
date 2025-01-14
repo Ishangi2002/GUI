@@ -8,6 +8,8 @@ import { useNavigate } from "react-router-dom";
 import axiosInstance from "../../utils/axiosInstance";
 import moment from "moment";
 import Toast from "../../components/ToastMessage/Toast";
+import EmptyCard from "../../components/EmptyCard/EmptyCard";
+import AddNotesImg from "../../assets/images/add-notes.svg";
 
 
 const Home = () => {
@@ -26,6 +28,8 @@ const Home = () => {
 
     const [notes,setNotes] = useState([]);
     const [userInfo,setUserInfo] = useState(null);
+    
+    const [isSearch, setIsSearch] = useState(false);
 
     const navigate = useNavigate();
 
@@ -100,6 +104,28 @@ const Home = () => {
     }
     }
 
+    //Search Notes
+    const onSearchNotes = async (query) => {
+        try {
+            const id = localStorage.getItem("id");
+            const response = await axiosInstance.get(`api/note/searchNotes/${id}`,{
+                params: {query},
+            });
+            if (response.status === 200) {
+                setIsSearch(true);
+                setNotes(response.data);
+            }
+        } catch(error) {
+            console.log(error);
+        }
+    };
+
+    const onClearSearch = () => {
+        setIsSearch(false);
+        getNotes();
+    }
+
+
     useEffect(()=> {
         getNotes();
         getUserInfo();
@@ -119,8 +145,9 @@ const Home = () => {
 
     return (
         <>
-            <Navbar userInfo={userInfo}/>
+            <Navbar userInfo={userInfo} onSearchNotes={onSearchNotes} onClearSearch={onClearSearch} />
             <div className="container mx-auto">
+               {notes.length > 0 ?(
                 <div className="grid grid-cols-3 gap-4 mt-8">
                     
                     {notes.map((item,index)=> (
@@ -137,9 +164,11 @@ const Home = () => {
                         /> 
                     ))}
         </div>
+         ) : (<EmptyCard imgSrc={AddNotesImg} message={`Start creating your first note! Click the 'Add' button to jotdown your
+          thoughts,ideas and reminders. Let's get started!` }/>)}
         </div>
 
-            <button className="w-16 h-16 flex items-center justify-center rounded-2xl bg-primary hover:bg-blue-600 absolute right-10 bottom-10" 
+            <button className="w-16 h-16 flex items-center justify-center rounded-2xl bg-primary hover:bg-purple-950 absolute right-10 bottom-10" 
                 onClick={() => {
                     setOpenAddEditModal({isShown: true, type: "add", data: null});
                 }}>

@@ -6,7 +6,7 @@ import { MdClose } from "react-icons/md";
 const AddEditNotes = ({noteData ,type, getNotes, onClose,user_id,showToastMessage}) => {
   const [title, setTitle] = useState(noteData?.title || "");
   const [content, setContent] = useState(noteData?.content|| "");
-  const [tags, setTags] = useState(noteData?.tags || []);
+  const [tags, setTags] = useState(noteData?.tags?.split(',') || []);
   const [error, setError] = useState(null);
 
   
@@ -14,10 +14,11 @@ const AddEditNotes = ({noteData ,type, getNotes, onClose,user_id,showToastMessag
   //Add note
   const addNote = async () => {
     try{
+      const tagString = tags.join(',')
       const response = await axiosInstance.post("api/note/addNote",{
         title,
         content,
-        tags,
+        tagString,
         user_id,
       });
       if (response.status===200){
@@ -38,13 +39,13 @@ const AddEditNotes = ({noteData ,type, getNotes, onClose,user_id,showToastMessag
 
   //Update Note
   const updateNotes = async () =>{
-    console.log(tags.split(',').join(','));
     const noteId = noteData.id
+    const tagString = tags.join(',')
     try{
       const response = await axiosInstance.put("api/note/updateNotes/"+noteId,{
         title,
         content,
-        tags,
+        tagString,
        
       });
       if (response.status === 200){
@@ -90,18 +91,18 @@ const AddEditNotes = ({noteData ,type, getNotes, onClose,user_id,showToastMessag
 
 
         <div className="flex flex-col gap-2">
-            <label className="input-label">TITLE</label>
+        <label className="input-label relative after:content-['*'] after:text-red-500 after:ml-2">TITLE</label>
             <input 
                 type ="text"
                 className="text-2xl text-slate-950 outline-none"
-                placeholder="Go to Gym At 5"
+                placeholder="Do the Maths Assignment"
                 value={title}
                 onChange={({target}) => setTitle(target.value)}
                 />
         </div>
 
         <div className="flex flex-col gap-2 mt-4">
-            <label className="input-label">CONTENT</label>
+        <label className="input-label relative after:content-['*'] after:text-red-500 after:ml-2">CONTENT</label>
             <textarea 
                 type="text"
                 className="text-sm text-slate-950 outline-none bg-slatw-50 p-2 rounded"

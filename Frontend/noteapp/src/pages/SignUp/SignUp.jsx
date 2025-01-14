@@ -41,15 +41,10 @@ const SignUp = () => {
                         password: password,
                     });
         
-                //Handle Successful registration response
-                if(response.data && response.data.token){
-                    setError(response.data.message)
-                    return 
+                if(response.status===200){
+                    navigate('/login')
                 }
-                if(response.data && response.data.token){
-                    localStorage.setItem("token",response.data.token)
-                    navigate('/dashboard')
-                }
+
                 } catch (error) {
                     //Handle login error
                     if(error.response && error.response.data && error.response.data.message) {
