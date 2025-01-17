@@ -4,13 +4,13 @@ import jwt from "jsonwebtoken";
 
 export const signup =(req, res) => {
 
-    //check exicting user
+//check exicting user
     const q = "SELECT * FROM user WHERE email =?";
     db.query(q,[req.body.email], (err,data) => {
         if(err) return res.json(err);
         if(data.length) return res.status(409).json("User already exists!");
 
-    //Hash the password and create a user
+ //Hash the password and create a user
         const salt = bcrypt.genSaltSync(10);
         const hash = bcrypt.hashSync(req.body.password, salt); 
 
@@ -24,7 +24,6 @@ export const signup =(req, res) => {
     });
 };
 
-
 export const login = (req,res) => {
     //check user
     const q ="SELECT * FROM user WHERE email =?";
@@ -37,7 +36,7 @@ export const login = (req,res) => {
         console.log(data[0].password_hash);
         console.log(req.body.password);
         const isPasswordCorrect = bcrypt.compareSync(req.body.password, data[0].password_hash);
-        if (!isPasswordCorrect) return res.status(400).json("Wrong username or password!")
+        if (!isPasswordCorrect) return res.status(400).json("Wrong email or password!")
 
         const token = jwt.sign({id:data[0].id} , "jwtkey");
        
