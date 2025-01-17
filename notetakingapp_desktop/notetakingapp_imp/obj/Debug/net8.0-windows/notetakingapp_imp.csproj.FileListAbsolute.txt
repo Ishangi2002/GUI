@@ -1,0 +1,127 @@
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\notetakingapp_imp.exe
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\notetakingapp_imp.deps.json
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\notetakingapp_imp.runtimeconfig.json
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\notetakingapp_imp.dll
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\notetakingapp_imp.pdb
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\landing_page.g.cs
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp_MarkupCompile.cache
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp_MarkupCompile.lref
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\landing_page.baml
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.g.resources
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.AssemblyInfoInputs.cache
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.AssemblyInfo.cs
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.csproj.CoreCompileInputs.cache
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.dll
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\refint\notetakingapp_imp.dll
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.pdb
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.genruntimeconfig.cache
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\ref\notetakingapp_imp.dll
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\login_page.g.cs
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\login_page.baml
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.csproj.AssemblyReference.cache
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetaki.E09B9CDB.Up2Date
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\SignUp_page.g.cs
+C:\Users\Ishangi\Desktop\New folder (2)\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\SignUp_page.baml
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\notetakingapp_imp.exe
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\notetakingapp_imp.deps.json
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\notetakingapp_imp.runtimeconfig.json
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\notetakingapp_imp.dll
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\notetakingapp_imp.pdb
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.csproj.AssemblyReference.cache
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\landing_page.g.cs
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\login_page.g.cs
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\SignUp_page.g.cs
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp_MarkupCompile.cache
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp_MarkupCompile.lref
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\landing_page.baml
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\login_page.baml
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\SignUp_page.baml
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.g.resources
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.AssemblyInfoInputs.cache
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.AssemblyInfo.cs
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.csproj.CoreCompileInputs.cache
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetaki.E09B9CDB.Up2Date
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.dll
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\refint\notetakingapp_imp.dll
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.pdb
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.genruntimeconfig.cache
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\obj\Debug\net8.0-windows\ref\notetakingapp_imp.dll
+C:\Users\Ishangi\Desktop\notetakingapp_imp\notetakingapp_imp\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.csproj.AssemblyReference.cache
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\landing_page.g.cs
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\login_page.g.cs
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\SignUp_page.g.cs
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp_MarkupCompile.cache
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp_MarkupCompile.lref
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\landing_page.baml
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\login_page.baml
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\SignUp_page.baml
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.g.resources
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.AssemblyInfoInputs.cache
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.AssemblyInfo.cs
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.csproj.CoreCompileInputs.cache
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\refint\notetakingapp_imp.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.pdb
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\notetakingapp_imp.exe
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\notetakingapp_imp.deps.json
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\notetakingapp_imp.runtimeconfig.json
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\notetakingapp_imp.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\notetakingapp_imp.pdb
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\notetaki.E09B9CDB.Up2Date
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.genruntimeconfig.cache
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\ref\notetakingapp_imp.dll
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\AddNoteWindow.g.cs
+C:\Users\Ishangi\Desktop\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\AddNoteWindow.baml
