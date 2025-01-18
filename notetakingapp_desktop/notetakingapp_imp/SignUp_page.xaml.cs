@@ -117,13 +117,13 @@ namespace notetakingapp_imp
             try
             {
                 
-                HttpResponseMessage response = await client.PostAsync("http://localhost:8800/api/user/createuser", content);
+                HttpResponseMessage response = await client.PostAsync("http://localhost:8800/api/auth/signup", content);
 
                 if (response.IsSuccessStatusCode)
                 {
                     string responseString = await response.Content.ReadAsStringAsync();
                     dynamic result = JsonConvert.DeserializeObject(responseString); 
-                    MessageBox.Show($"User created successfully. User ID: {result.userId}", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show(result);
                 }
                 else
                 {

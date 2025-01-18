@@ -5,8 +5,98 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:notetakingapp_imp"
         mc:Ignorable="d"
-        Title="AddNoteWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="AddNoteWindow"  Height="600" Width="900" Background="White">
+
+    <Border Margin="200 100 200 100" BorderBrush="#D9DDDC" BorderThickness="1" CornerRadius="3">
+        <Grid>
+            <TextBlock Text="❌" FontSize="10" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,30,0" Foreground="#D6D6D6"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
+
+                <StackPanel>
+                    <TextBlock 
+                Margin="15 10"
+                FontSize="12">
+                <Run Text="TITLE" Foreground="#D6D6D6"/>
+                <Run Text="*" Foreground="Red"/>
+                    </TextBlock>
+
+                    <TextBox x:Name="txtTitle" 
+                 Foreground="#D6D6D6" 
+                 FontSize="20" 
+                 HorizontalAlignment="Left" 
+                 Margin="10 -5" 
+                 Width="474" 
+                 BorderBrush="White" 
+                 GotFocus="TitleBox_GotFocus" 
+                 LostFocus="TitleBox_LostFocus"
+                 Text="Do the Maths Assignment" 
+                 BorderThickness="0 0 0 0"/>
+                    <TextBlock 
+                Margin="15 15"
+                FontSize="12">
+                <Run Text="CONTENT" Foreground="#D6D6D6"/>
+                <Run Text="*" Foreground="Red"/>
+                    </TextBlock>
+                    <TextBox x:Name="txtContent" 
+                 Foreground="#D6D6D6" 
+                 FontSize="15" 
+                 HorizontalAlignment="Left" 
+                 Margin="20 -5" 
+                 Width="474" 
+                 BorderBrush="White" 
+                 GotFocus="ContentBox_GotFocus" 
+                 LostFocus="ContentBox_LostFocus"
+                 Text="Content" 
+                 BorderThickness="0 0 0 0"/>
+                    <TextBlock 
+                Margin="15 150"
+                FontSize="12">
+                <Run Text="TAGS" Foreground="#D6D6D6"/>
+                    </TextBlock>
+                    <TextBox x:Name="txtTags"
+                 Margin="15 -165 -10 100"
+                 Height="20"
+                 Width="150"
+                 HorizontalAlignment="Left"
+                 BorderBrush="#D6D6D6"
+                 Foreground="#D6D6D6"
+                 GotFocus="TagBox_GotFocus" 
+                 LostFocus="TagBox_LostFocus"
+                 Text="Add tags"/>
+
+                    <Button Width="18"
+                Height="18"
+                Margin="-130 -265 0 0">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="White" CornerRadius="2" BorderBrush="#7321A6"  BorderThickness="1">
+                                    <ContentPresenter Content="+" HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.Foreground="#7321A6"
+                      TextElement.FontSize="18" RenderTransformOrigin="0.507,0.591" Height="28" Width="12"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button Width="455"
+                Height="25"
+                Margin="-25 -190 0 0">
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="#7321A6" CornerRadius="2" BorderBrush="#7321A6"  BorderThickness="1">
+                                    <ContentPresenter Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.Foreground="White"
+                      TextElement.FontSize="10" RenderTransformOrigin="0.507,0.591" Height="20" Width="76" Margin="80 8 2 2"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+                </StackPanel>
+                
+            </ScrollViewer>
+        </Grid>
+
+    </Border>
+
+
 </Window>

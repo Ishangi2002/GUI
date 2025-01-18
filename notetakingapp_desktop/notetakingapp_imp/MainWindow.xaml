@@ -7,37 +7,45 @@
         mc:Ignorable="d"
         Title="Dashboard" Height="600" Width="900" Background="White">
 
-    <Grid Margin="20,10,16,480">
+    <Grid Margin="0,10,0,480">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
-
-        <!-- Username Display -->
-        <TextBlock Name="usernameTextBlock"
-                   FontSize="18" 
-                   FontWeight="Medium" 
-                   VerticalAlignment="Center" 
-                   Grid.Column="0" Grid.ColumnSpan="2" Height="235" Margin="0,0,-13,0" />
+        <Line X1="0" 
+      Y1="0" 
+      X2="900" 
+      Y2="0" 
+      Stroke="#D3D3D3" 
+      StrokeThickness="2" 
+      HorizontalAlignment="Center" 
+      VerticalAlignment="Top" Margin="0,67,0,0" Width="937" />
+        <!-- Notes Header -->
+        <TextBlock Text="Notes" 
+                    FontSize="18" 
+                    FontWeight="Medium" 
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Grid.Column="0" 
+                    Margin="25,7,0,0" 
+                    Height="30"
+                    Width="100"/>
 
         <!-- Border for rounded edges -->
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Margin="211,0,0,0">
             <Border CornerRadius="5" 
                     Background="#F5F5F5" 
-                    BorderBrush="#D6D6D6" 
+                    BorderBrush="#F5F5F5" 
                     BorderThickness="1" 
                     Width="280" 
                     Height="30" 
-                    VerticalAlignment="Center" 
-                    HorizontalAlignment="Center" 
-                    Margin="100,0,0,0">
+                    VerticalAlignment="Top" 
+                    HorizontalAlignment="Left" 
+                    Margin="100,-28,0,0">
 
                 <!-- TextBox for input -->
-                <TextBox x:Name="searchTextBox"
+                <TextBlock x:Name="searchTextBox"
                     Background="Transparent"
-                    BorderThickness="0"
-                    Margin="20,-1,-1,1"
-                    VerticalContentAlignment="Center"
+                    Margin="23,3,-4,5"
                     Foreground="#D6D6D6"
                     FontSize="14"
                     Text="Search Notes" 
@@ -51,9 +59,9 @@
                     Background="#F5F5F5" 
                     BorderBrush="#F5F5F5" 
                     BorderThickness="1" 
-                    VerticalAlignment="Center" 
-                    HorizontalAlignment="Center" 
-                    Margin="340,0,0,0" 
+                    VerticalAlignment="Top" 
+                    HorizontalAlignment="Left" 
+                    Margin="347,-24,0,0" 
                     RenderTransformOrigin="-1.53,0.571">
 
                 <!-- Button content (optional icon) -->
@@ -63,50 +71,140 @@
                     Background="#F5F5F5" 
                     Foreground="#D6D6D6" 
                     RenderTransformOrigin="0.438,0.329" 
-                    HorizontalAlignment="Center"/>
+                    HorizontalAlignment="Left" Height="35"/>
             </Button>
         </Grid>
-
-
-
-        <!-- Notes Header -->
-        <TextBlock Text="Notes" 
-                   FontSize="18" 
-                   FontWeight="Medium" 
-                   VerticalAlignment="Top"
-                   HorizontalAlignment="Left"
-                   Grid.Column="0" 
-                   Grid.ColumnSpan="2" 
-                   Margin="15,28,-25,0" 
-                   Height="30"
-                   Width="100"/>
-
-        <!-- Logout Link -->
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Column="1">
-            <TextBlock FontSize="9" Margin="0 0 40 -10 " FontFamily="Tahoma">
-                <Hyperlink NavigateUri="Dashboard" Click="Hyperlink_Click">
-                    <Hyperlink.Style>
+        <Grid >
+            <!-- Logout Link -->
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="790,-8,0,0">
+                <TextBlock FontSize="9" FontFamily="Tahoma"><Hyperlink NavigateUri="Dashboard" Click="Hyperlink_Click"><Hyperlink.Style>
                         <Style TargetType="{x:Type Hyperlink}">
                             <Setter Property="Foreground" Value="Black" />
                         </Style>
-                    </Hyperlink.Style>
-                    <Run Text="Logout" FontFamily="Segoe UI" />
-                </Hyperlink>
-            </TextBlock>
-        </StackPanel>
+                    </Hyperlink.Style><Run Text="Logout" FontFamily="Segoe UI" /></Hyperlink></TextBlock>
+            </StackPanel>
+
+            <!--username view circle-->
+            <Canvas Width="900" Margin="0,0,30,0">
+                <Ellipse 
+                Width="40" 
+                Height="40"
+                Fill="#F5F5F5" 
+                Stroke="#F5F5F5"
+                StrokeThickness="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top" Canvas.Left="739" Canvas.Top="8"/>
+                <TextBlock
+                Text="IS"
+                Foreground="Black"
+                Background="#F5F5F5" Canvas.Left="755" Canvas.Top="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            </Canvas>
+
+            <TextBlock
+                Text="Ishangi Shashinthya"
+                Foreground="Black"               
+                Background="Transparent"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="790,13,0,0"
+                FontSize="9"
+                TextWrapping="NoWrap"/>
+
+        </Grid>
+        <Grid Margin="0 570 100 10">
+            <!--Note card-->
+            <Border Margin="48,-480,450,361" BorderBrush="#D3D3D3" BorderThickness="1" CornerRadius="4" >
+                <TextBlock
+                Margin="9,9,0,0"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left" Height="64" TextWrapping="Wrap" LineHeight="20">
+                    <Run Text="Test01" FontWeight="Medium" FontSize="12"  />
+                    <LineBreak />
+                    <Run Text="12th Jan 2025" FontSize="10" />
+                    <LineBreak />
+                    <Run Text="This is testedit one." FontSize="10"  />
+                    <LineBreak/>
+                </TextBlock>
+            </Border>
+            <Border BorderBrush="#F5F5F5" BorderThickness="1" Background="#F5F5F5" Height="22"  VerticalAlignment="Top" Margin="62,-394,680,0" CornerRadius="7">
+                <TextBlock 
+                    Text="#tag"
+                    FontSize="10"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center" 
+                    Width="32" 
+                    Height="16" Margin="10,0,0,0"
+                    >
+                </TextBlock>
+            </Border>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-402,515,0">
+                <!-- Edit Icon -->
+                <Button Content="✏️" 
+                        Width="18" 
+                        Height="18" 
+                        Margin="0,5,5,0" 
+                        ToolTip="Edit" 
+                        Background="White" 
+                        Foreground="#C0C0C0" 
+                        BorderBrush="White">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="OverridesDefaultStyle" Value="True" />
+                            <Setter Property="Background" Value="White" />
+                            <Setter Property="BorderBrush" Value="White" />
+                            <Setter Property="Foreground" Value="#C0C0C0" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <!-- Delete Icon -->
+                <Button Content="🗑️" 
+                        Width="18" 
+                        Height="18" 
+                        ToolTip="Delete" 
+                        Background="White" 
+                        Foreground="#C0C0C0" 
+                        BorderBrush="White"
+                        Margin="0 5 -15 0">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="OverridesDefaultStyle" Value="True" />
+                            <Setter Property="Background" Value="White" />
+                            <Setter Property="BorderBrush" Value="White" />
+                            <Setter Property="Foreground" Value="#C0C0C0" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+
+            </StackPanel>
+        </Grid>
 
         <!-- Add Note Button -->
-
         <Button x:Name="btnaddNote" 
                 Click="btnaddNote_Click"  
                 Width="35" 
                 Height="35" 
-                Margin="796,0,0,-420" 
+                Margin="796,0,0,-443" 
                 HorizontalAlignment="Left"
-                VerticalAlignment="Bottom" Grid.ColumnSpan="2">
+                VerticalAlignment="Bottom">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="#7321A6" CornerRadius="4" BorderBrush="#7321A6" BorderThickness="1">
+                    <Border Background="#7321A6" CornerRadius="5" BorderBrush="#7321A6" BorderThickness="1">
                         <ContentPresenter Content="+" HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.Foreground="White"
                                   TextElement.FontSize="18" RenderTransformOrigin="0.507,0.591" Height="28" Width="12"/>
                     </Border>

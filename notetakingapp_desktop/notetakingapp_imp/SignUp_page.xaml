@@ -11,43 +11,62 @@
         <StackPanel Margin="20">
 
          <Label Content="SignUp" Foreground="Black" FontSize="20" HorizontalAlignment="Left" FontFamily="popins" Margin="0 0 0 20"/>
-          
-            <TextBox x:Name="txtName" 
-             Foreground="#909090" 
-             FontSize="9" 
-             HorizontalAlignment="Left" 
-             Margin="26,0,0,4" 
-             Width="190" 
-             Height="25"
-             BorderBrush="#D9DDDC"
-             GotFocus="TextBox1_GotFocus" 
-             LostFocus="TextBox1_LostFocus"
-             Text="Name" />
-            
-            <TextBox x:Name="txtEmail" 
-             Foreground="#909090" 
-             FontSize="9" 
-             HorizontalAlignment="Left" 
-             Margin="26,0,0,4" 
-             Width="190" 
-             Height="25"
-             BorderBrush="#D9DDDC"       
-             GotFocus="TextBox2_GotFocus" 
-             LostFocus="TextBox2_LostFocus"
-             Text="Email" />
-            
-            <TextBox x:Name="txtPassword" 
-             Foreground="#909090" 
-             FontSize="9" 
-             HorizontalAlignment="Left" 
-             Margin="26,0,0,4" 
-             Width="190" 
-             Height="25"
-             BorderBrush="#D9DDDC"
-             GotFocus="TextBox3_GotFocus" 
-             LostFocus="TextBox3_LostFocus"
-             Text="Password" />   
-            
+
+            <Border CornerRadius="3" 
+                    BorderBrush="#D9DDDC" 
+                    BorderThickness="1" 
+                    HorizontalAlignment="Left" 
+                    Margin="26,0,0,4" 
+                    Width="190" 
+                    Height="25">
+                <TextBox x:Name="txtName" 
+                     Foreground="#909090" 
+                     FontSize="12" 
+                     Background="Transparent" 
+                     BorderThickness="0" 
+                     VerticalContentAlignment="Center" 
+                     GotFocus="TextBox1_GotFocus" 
+                     LostFocus="TextBox1_LostFocus" 
+                     Text="Name" Margin="7,0,-7,0" />
+            </Border>
+
+            <Border CornerRadius="3" 
+                    BorderBrush="#D9DDDC" 
+                    BorderThickness="1" 
+                    HorizontalAlignment="Left" 
+                    Margin="26,0,0,4" 
+                    Width="190" 
+                    Height="25">
+                <TextBox x:Name="txtEmail" 
+                     Foreground="#909090" 
+                     FontSize="12" 
+                     Background="Transparent" 
+                     BorderThickness="0" 
+                     VerticalContentAlignment="Center" 
+                     GotFocus="TextBox2_GotFocus" 
+                     LostFocus="TextBox2_LostFocus" 
+                     Text="Email" Margin="6,0,-6,0" />
+            </Border>
+
+            <Border CornerRadius="3" 
+                    BorderBrush="#D9DDDC" 
+                    BorderThickness="1" 
+                    HorizontalAlignment="Left" 
+                    Margin="26,0,0,4" 
+                    Width="190" 
+                    Height="25">
+                <TextBox x:Name="txtPassword" 
+                     Foreground="#909090" 
+                     FontSize="12" 
+                     Background="Transparent" 
+                     BorderThickness="0" 
+                     VerticalContentAlignment="Center" 
+                     GotFocus="TextBox3_GotFocus" 
+                     LostFocus="TextBox3_LostFocus" 
+                     Text="Password" Margin="6,0,-6,0" />
+            </Border>
+
+
             <Button x:Name="btncreate" Click="CreateUser_Click" Content="Create Account" Width="190" Height="25" Margin="25,5,25,10" FontSize="10" Foreground="White" HorizontalAlignment="Left">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">

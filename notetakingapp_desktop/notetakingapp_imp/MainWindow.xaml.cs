@@ -14,9 +14,6 @@ namespace notetakingapp_imp
         public MainWindow()
         {
             InitializeComponent();
-
-          
-            usernameTextBlock.Text = "Ishangi";
         }
 
        
@@ -49,6 +46,6 @@ namespace notetakingapp_imp
             addNoteWindow.ShowDialog();
         }
 
-
+        
     }
 }
