@@ -124,6 +124,16 @@ namespace notetakingapp_imp
                     string responseString = await response.Content.ReadAsStringAsync();
                     dynamic result = JsonConvert.DeserializeObject(responseString); 
                     MessageBox.Show(result);
+
+                    // Clear the text boxes and reset placeholders
+                    txtName.Text = "Name";
+                    txtName.Foreground = new SolidColorBrush(Colors.Gray);
+
+                    txtEmail.Text = "Email";
+                    txtEmail.Foreground = new SolidColorBrush(Colors.Gray);
+
+                    txtPassword.Text = "Password";
+                    txtPassword.Foreground = new SolidColorBrush(Colors.Gray);
                 }
                 else
                 {

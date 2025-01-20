@@ -1,6 +1,9 @@
-﻿using System;
+﻿using MySqlX.XDevAPI;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,6 +22,7 @@ namespace notetakingapp_imp
     /// </summary>
     public partial class AddNoteWindow : Window
     {
+        private static readonly HttpClient client = new HttpClient();
         public AddNoteWindow()
         {
             InitializeComponent();
@@ -75,6 +79,55 @@ namespace notetakingapp_imp
                 txtTags.Foreground = new SolidColorBrush(Colors.Gray);
             }
         }
+        private async void AddNoteButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Retrieve input values
+            string title = txtTitle.Text;
+            string content = txtContent.Text;
+            string tags = txtTags.Text;
+            int userId = UserSession.UserId;
 
+            string apiUrl = "http://localhost:8800/api/note/addNote"; 
+            var note = new
+            {
+                title = title,
+                content = content,
+                tagString = tags,
+                user_id = userId
+
+            };
+
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    // Convert note object to JSON
+                    string json = JsonConvert.SerializeObject(note);
+                    StringContent contentData = new StringContent(json, Encoding.UTF8, "application/json");
+
+                    // Make POST request
+                    HttpResponseMessage response = await client.PostAsync(apiUrl, contentData);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Note has been added successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        string error = await response.Content.ReadAsStringAsync();
+                        MessageBox.Show($"Error: {error}", "Failed", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
+
+
+
 }
+

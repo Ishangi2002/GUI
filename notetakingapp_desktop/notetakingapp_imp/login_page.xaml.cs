@@ -119,6 +119,10 @@ namespace notetakingapp_imp
                     string name = responseData.name;
                     int userId = responseData.id;
 
+                    // Store data in UserSession
+                    UserSession.UserId = userId;
+                    UserSession.Token = token;
+
                     MainWindow mainPage = new MainWindow();
                     mainPage.Show();
                     this.Close();
@@ -134,6 +138,7 @@ namespace notetakingapp_imp
             }
 
         }
+
 
 
     }
