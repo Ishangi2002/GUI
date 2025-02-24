@@ -11,23 +11,24 @@ namespace notetakingapp_imp
     public class Note
     {
         public int id { get; set; }
-        public string Title { get; set; }
-        public string Date { get; set; }
-        public string Content { get; set; }
-        public string Tags { get; set; }
+        public string ?Title { get; set; }
+        public string ?Content { get; set; }
+        public string ?Tags { get; set; }
+        public string ?CreatedAt { get; set; }
+        public string ?UpdatedAt { get; set; }
+
 
         // Property to format the date
         public string FormattedDate
         {
             get
             {
-                if (string.IsNullOrEmpty(Date))
+                if (string.IsNullOrEmpty(CreatedAt))
                     return "No Date Available";
 
                 try
                 {
-                    // Attempt to parse the Date string into DateTime
-                    DateTime parsedDate = DateTime.ParseExact(Date, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+                    DateTime parsedDate = DateTime.Parse(CreatedAt, null, DateTimeStyles.RoundtripKind); 
                     return parsedDate.ToString("dd MMM yyyy"); // Format as "10th Jan 2025"
                 }
                 catch (FormatException)

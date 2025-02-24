@@ -5,36 +5,78 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:notetakingapp_imp"
         mc:Ignorable="d"
-        Title="landing_page" Height="600" Width="900" Background="White">
+        Title="Landing Page"
+        Background="White"
+        WindowState="Maximized" 
+        WindowStartupLocation="CenterScreen"
+        Width="900"
+        Height="600">
     <Grid>
-    <StackPanel Margin="0 150 ">
-        
-        <Label Content="Welcome to NoteMate!" Foreground="#7321A6" FontSize="25" HorizontalAlignment="Center" FontWeight="Bold" />
-        <Label Content="Your personal note-taking companion.Organize your thoughts and ideas easily!" Foreground="gray" FontSize="20" HorizontalAlignment="Center" FontWeight="Bold" Margin="20" Width="760" />
-        
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,0">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="860">
+            <!-- Welcome Title -->
+            <Label Content="Welcome to NoteMate!" 
+                   Foreground="#7321A6" 
+                   FontSize="40" 
+                   HorizontalAlignment="Center" 
+                   FontWeight="Bold" />
 
-            <Button x:Name="btnLogin" Click="openWindow1" Content="Login" Width="70" Height="40" Margin="25 20" FontSize="15"  Foreground="White" MouseEnter="btnLogin_MouseEnter" MouseLeave="btnLogin_MouseLeave" >
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="#7321A6" CornerRadius="12" BorderBrush="#7321A6" BorderThickness="1">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            
-            <Button x:Name="btnSignUp" Content="Sign Up" Width="70" Height="40" Margin="25 20" FontSize="15" Foreground="Black" MouseEnter="btnSignUp_MouseEnter" MouseLeave="btnSignUp_MouseLeave" Click="OpenWindow2" >
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border Background="White" CornerRadius="12" BorderBrush="#7321A6" BorderThickness="1">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-            </Button>
+            <!-- Subtitle -->
+            <Label Content="Your personal note-taking companion. Organize your thoughts and ideas easily!" 
+                   Foreground="Gray" 
+                   FontSize="21" 
+                   HorizontalAlignment="Center" 
+                   FontWeight="Bold" 
+                   Margin="0,20,0,40" 
+                   MaxWidth="800" Width="882"  />
 
+            <!-- Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <!-- Login Button -->
+                <Button x:Name="btnLogin" 
+                        Click="openWindow1" 
+                        Content="Login" 
+                        Width="120" 
+                        Height="50" 
+                        FontSize="20" 
+                        Foreground="White" 
+                        MouseEnter="btnLogin_MouseEnter" 
+                        MouseLeave="btnLogin_MouseLeave"
+                        Margin="0 0 50 10">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#7321A6" 
+                                    CornerRadius="15" 
+                                    BorderBrush="#7321A6" 
+                                    BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <!-- Sign Up Button -->
+                <Button x:Name="btnSignUp" 
+                        Content="Sign Up" 
+                        Width="117" 
+                        Height="50" 
+                        FontSize="20" 
+                        Foreground="Black" 
+                        MouseEnter="btnSignUp_MouseEnter" 
+                        MouseLeave="btnSignUp_MouseLeave" 
+                        Click="OpenWindow2"
+                         Margin="0 0 50 10">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="White" 
+                                    CornerRadius="15" 
+                                    BorderBrush="#7321A6" 
+                                    BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
         </StackPanel>
-    </StackPanel>
     </Grid>
 </Window>

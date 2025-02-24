@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Ishangi\Desktop\noteapp_important\notetakingapp_desktop\notetakingapp_imp\App.xaml
-5-2079429278
+61592938097
 
-12-534307581
+13-659745503
 2071714450597
-AddNoteWindow.xaml;landing_page.xaml;login_page.xaml;MainWindow.xaml;SignUp_page.xaml;
+AddNoteWindow.xaml;landing_page.xaml;login_page.xaml;MainWindow.xaml;SignUp_page.xaml;UpdateWindow.xaml;
 
-True
+False
 

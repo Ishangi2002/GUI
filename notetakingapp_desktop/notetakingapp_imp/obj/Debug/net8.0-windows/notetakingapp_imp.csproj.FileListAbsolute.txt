@@ -170,3 +170,5 @@ C:\Users\Ishangi\Desktop\noteapp_important\notetakingapp_desktop\notetakingapp_i
 C:\Users\Ishangi\Desktop\noteapp_important\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.pdb
 C:\Users\Ishangi\Desktop\noteapp_important\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\notetakingapp_imp.genruntimeconfig.cache
 C:\Users\Ishangi\Desktop\noteapp_important\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\ref\notetakingapp_imp.dll
+C:\Users\Ishangi\Desktop\noteapp_important\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\UpdateWindow.g.cs
+C:\Users\Ishangi\Desktop\noteapp_important\notetakingapp_desktop\notetakingapp_imp\obj\Debug\net8.0-windows\UpdateWindow.baml

@@ -5,77 +5,103 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:notetakingapp_imp"
         mc:Ignorable="d"
-        Title="login_page" Height="600" Width="900">
-    <Border Margin="300 100 300 200" BorderBrush="#D9DDDC" BorderThickness="1" CornerRadius="2,2,2,2">
-        <StackPanel Margin="20">
+        Title="Login Page" Height="600" Width="900" Background="White" WindowState="Maximized" 
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="Auto" MinHeight="282"/>
+            <RowDefinition Height="88*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="Auto" MinWidth="395"/>
+            <ColumnDefinition Width="51*"/>
+        </Grid.ColumnDefinitions>
 
-            <Label Content="Login" Foreground="Black" FontSize="20" HorizontalAlignment="Left" FontFamily="popins" Margin="0 0 0 20"/>
+        <!-- Centered Content -->
+        <Border Grid.Column="1" 
+                Padding="20" 
+                Background="White" 
+                BorderBrush="#D9DDDC"
+                BorderThickness="1"
+                Height="310"
+                CornerRadius="10" Margin="0 150 0 20" Grid.RowSpan="2">
+            <StackPanel>
+                <!-- Title -->
+                <Label Content="Login" 
+                       Foreground="Black" 
+                       FontSize="24" 
+                       FontFamily="Poppins" 
+                       HorizontalAlignment="Left" 
+                       Margin="10,0,0,30"/>
 
-            <Border CornerRadius="3" 
-                    BorderBrush="#D9DDDC" 
-                    BorderThickness="1" 
-                    HorizontalAlignment="Left" 
-                    Margin="26,0,0,4" 
-                    Width="190" 
-                    Height="25">
-                <TextBox x:Name="txtEmail" 
-                     Foreground="#909090" 
-                     FontSize="12" 
-                     Background="Transparent" 
-                     BorderThickness="0" 
-                     VerticalContentAlignment="Center"
-                     GotFocus="TextBox2_GotFocus" 
-                     LostFocus="TextBox2_LostFocus"
-                     Text="Email" Margin="8,0,-8,0" />
-            </Border>
+                <!-- Email Input -->
+                <Border CornerRadius="5" 
+                        BorderBrush="#D9DDDC" 
+                        BorderThickness="1" 
+                        Margin="0,0,0,10" 
+                        Height="40">
+                    <TextBox x:Name="txtEmail" 
+                             Foreground="#909090" 
+                             FontSize="14" 
+                             Background="Transparent" 
+                             BorderThickness="0" 
+                             VerticalContentAlignment="Center"
+                             GotFocus="TextBox2_GotFocus" 
+                             LostFocus="TextBox2_LostFocus"
+                             Text="Email" Padding="10,0"/>
+                </Border>
 
+                <!-- Password Input -->
+                <Border CornerRadius="5" 
+                        BorderBrush="#D9DDDC" 
+                        BorderThickness="1" 
+                        Margin="0,0,0,30" 
+                        Height="40">
+                    <TextBox x:Name="txtPassword" 
+                             Foreground="#909090" 
+                             FontSize="14" 
+                             Background="Transparent" 
+                             BorderThickness="0" 
+                             VerticalContentAlignment="Center" 
+                             GotFocus="TextBox3_GotFocus" 
+                             LostFocus="TextBox3_LostFocus" 
+                             Text="Password" Padding="10,0"/>
+                </Border>
 
-            <Border CornerRadius="3" 
-                BorderBrush="#D9DDDC" 
-                BorderThickness="1" 
-                HorizontalAlignment="Left" 
-                Margin="26,0,0,4" 
-                Width="190" 
-                Height="25">
-                <TextBox x:Name="txtPassword" 
-             Foreground="#909090" 
-             FontSize="12" 
-             Background="Transparent" 
-             BorderThickness="0" 
-             VerticalContentAlignment="Center" 
-             GotFocus="TextBox3_GotFocus" 
-             LostFocus="TextBox3_LostFocus" 
-             Text="Password" Margin="7,0,-7,0" />
-            </Border>
+                <!-- Login Button -->
+                <Button x:Name="btnLogin" 
+                        Click="btnLogin_Click" 
+                        Content="Login" 
+                        Height="40" 
+                        FontSize="14" 
+                        Foreground="White" 
+                        Margin="0,0,0,10">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#7321A6" 
+                                    CornerRadius="5" 
+                                    BorderBrush="#7321A6" 
+                                    BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
 
-
-            <Button x:Name="btnLogin" Click="btnLogin_Click" Content="Login" Width="190" Height="25" Margin="25,5,25,10" FontSize="10" Foreground="White" HorizontalAlignment="Left"
-            MouseEnter="btnLogin_MouseEnter" MouseLeave="btnLogin_MouseLeave">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="#7321A6" CornerRadius="4" BorderBrush="#7321A6" BorderThickness="1">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Label Content="Not Registered Yet?" FontSize="9" Width="88" Height="22" HorizontalAlignment="Left" Margin="30 0 0 1"/>
-
-            <TextBlock HorizontalAlignment="Right" Margin="0 -18 55 10" FontSize="9">
-                <Hyperlink NavigateUri="SignUp_page" Click="Hyperlink_Click" Foreground="#7321A6">
-                    <Hyperlink.Style>
-                        <Style TargetType="Hyperlink">
-                            <Setter Property="Foreground" Value="#7321A6" />
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Foreground" Value="#7321A6" />
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Hyperlink.Style>
-                    <Run Text="Create an Account" />
-                </Hyperlink>    
-            </TextBlock>
-        </StackPanel>
-    </Border>
+                <!-- Registration Text -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Label Content="Not Registered Yet?" 
+                           FontSize="12" 
+                           VerticalAlignment="Center"/>
+                    <TextBlock Margin="5,0,0,0" FontSize="12" VerticalAlignment="Center">
+                        <Hyperlink NavigateUri="SignUp_page" Click="Hyperlink_Click">
+                            <Run Text="Create an Account" />
+                        </Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
 </Window>

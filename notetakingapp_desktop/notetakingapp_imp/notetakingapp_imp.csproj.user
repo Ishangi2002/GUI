@@ -19,6 +19,9 @@
     <Compile Update="SignUp_page.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UpdateWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="AddNoteWindow.xaml">
@@ -34,6 +37,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SignUp_page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UpdateWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

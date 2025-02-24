@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace notetakingapp_imp
 {
-    /// <summary>
-    /// Interaction logic for AddNoteWindow.xaml
-    /// </summary>
     public partial class AddNoteWindow : Window
     {
         private static readonly HttpClient client = new HttpClient();
