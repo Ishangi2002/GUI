@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WaUiQbHHneE=",
+  "dgSpecHash": "pTfypF6J9W0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ishangi\\Desktop\\noteapp_important\\notetakingapp_desktop\\notetakingapp_imp\\notetakingapp_imp.csproj",
+  "projectFilePath": "C:\\Users\\Ishangi\\Desktop\\note-taking_application\\notetakingapp_desktop\\notetakingapp_imp\\notetakingapp_imp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ishangi\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\Ishangi\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",

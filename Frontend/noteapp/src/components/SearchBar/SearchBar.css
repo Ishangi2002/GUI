@@ -1,0 +1,39 @@
+.search-bar {
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem; 
+    background-color: #f1f5f9; 
+    border-radius: 0.375rem; 
+  }
+  
+  .search-input {
+    width: 100%;
+    font-size: 0.875rem; 
+    background-color: transparent;
+    padding: 0.6875rem 0; 
+    outline: none;
+    border: none;
+  }
+  
+  .close-icon {
+    font-size: 1.25rem; 
+    color: #6b7280; 
+    cursor: pointer;
+    margin-right: 0.75rem;
+  }
+  
+  .close-icon:hover {
+    color: black; 
+  }
+  
+  .search-icon {
+    font-size: 1.25rem;
+    color: #9ca3af; 
+    cursor: pointer;
+  }
+  
+  .search-icon:hover {
+    color: black; 
+  }
+  

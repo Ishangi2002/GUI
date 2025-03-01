@@ -1,0 +1,40 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-title {
+    font-size: 1.25rem; 
+    font-weight: 500; 
+    color: #000000; 
+    padding: 0.5rem 0;
+  }
+  
+  .navbar-container .search-bar {
+    flex-grow: 1;
+    max-width: 500px;
+    margin: 0 1rem;
+  }
+  
+  .navbar-container .profile-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .navbar-container .profile-info button {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    
+  }
+  
+  .navbar-container .profile-info button:hover {
+    text-decoration: underline;
+  }
+  

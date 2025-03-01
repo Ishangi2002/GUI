@@ -1,0 +1,189 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.add-edit-notes-container {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background-color: white;
+  margin-left: 330px;
+  margin-right: 300px;
+  margin-top: 120px;
+  padding: 25px;
+  border-radius: 6px;
+}
+
+.close-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.close-button:hover {
+  background-color: white;
+}
+
+.close-icon {
+  font-size: 1.25rem;
+  color: #94a3b8;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.input-label {
+  font-weight: 500;
+  color: #334155;
+}
+
+.required-asterisk {
+  color: #ef4444;
+  margin-left: 4px;
+}
+
+.title-input {
+  font-size: 1.5rem;
+  color: #0f172a;
+  outline: none;
+  border: none;
+  padding: 0;
+}
+
+.content-input {
+  font-size: 0.875rem;
+  color: #0f172a;
+  outline: none;
+  background-color: #f8fafc;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #cbd5e1;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.75rem;
+  padding-top: 16px;
+}
+
+.submit-button {
+  background-color: #7321a6;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 800px;
+}
+
+.submit-button:hover {
+  background-color: ;
+}
+
+/* Home Page Styles */
+.container {
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.empty-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.empty-card img {
+  max-width: 200px;
+  margin-bottom: 16px;
+}
+
+.empty-card p {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.add-button {
+  position: absolute;
+  bottom: 50px;
+  right: 32px;
+  background-color: #7321a6;
+  border-radius: 12px;
+  padding: 18px ;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  border: none;
+  height: 65px;
+  width: 65px;
+}
+
+.add-button:hover {
+  background-color: #441752;
+}
+
+.add-button:focus {
+  outline: none;
+}
+
+.modal-container {
+  width: 40%;
+  max-height: 75%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  overflow-y: auto;
+  margin: 14% auto;
+}
+
+.toast {
+  padding: 16px;
+  color: white;
+  background-color: #3b82f6;
+  border-radius: 4px;
+  margin-top: 10px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.toast-delete {
+  background-color: #ef4444;
+}
+
+.toast-message {
+  font-size: 1rem;
+}
+
+.toast-close {
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 1.25rem;
+}

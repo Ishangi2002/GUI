@@ -1,47 +1,43 @@
-import React from "react"
-import {MdOutlinePushPin} from "react-icons/md";
-import {MdCreate, MdDelete} from "react-icons/md";
+import React from "react";
+import { MdOutlinePushPin } from "react-icons/md";
+import { MdCreate, MdDelete } from "react-icons/md";
 import moment from "moment";
+import "./NoteCard.css"; // Import the regular CSS file
 
 const NoteCard = ({
-    title,
-    date,
-    content,
-    tags,
-    //isPinned,
-    onEdit, 
-    onDelete, 
-    onPinNote
+  title,
+  date,
+  content,
+  tags,
+  onEdit,
+  onDelete,
+  onPinNote,
 }) => {
   return (
-    <div className="border rounded p-4 bg-white hover:shadow-xl transition-all ease-in-out">
-        <div className="flex items -center justify-between">
-            <div>
-                <h6 className="text-sm font-medium">{title}</h6>
-                <span className="text-xs text-slate-500">{moment(date).format('Do MMM YYYY')}</span>
-            </div>
-            {/* <MdOutlinePushPin className={`icon-btn ${isPinned ? 'text-primary' : 'text-slate-300'}`} onClick={onPinNote} 
-            /> */}
+    <div className="note-card">
+      <div className="note-header">
+        <div>
+          <h6 className="note-title">{title}</h6>
+          <span className="note-date">{moment(date).format("Do MMM YYYY")}</span>
         </div>
-            <p className="text-xs text-slate-600 mt-2">{content?.slice(0, 60)}</p>
-            <div className="flex items-center justify-between mt-2">
-            
-            <div className="flex flex-wrap gap-1">
-                    {tags ? tags.split(',').map((item,index)=> (
-                        <span key ={index} className="text-xs text-slate-500 bg-gray-200 rounded-full px-2 py-1">#{item}</span>
-                    )): null }
-            </div>
-            <div className="flex items-center gap-2">
-                <MdCreate
-                    className="icon-btn hover:text-green-600"
-                    onClick={onEdit}
-                />
-                <MdDelete
-                    className="icon-btn hover:text-red-500"
-                    onClick={onDelete}
-                />
-            </div>
-            </div>
+        {/* <MdOutlinePushPin className={`icon-btn ${isPinned ? 'text-primary' : 'text-slate-300'}`} onClick={onPinNote} /> */}
+      </div>
+      <p className="note-content">{content?.slice(0, 60)}</p>
+      <div className="note-footer">
+        <div className="note-tags">
+          {tags
+            ? tags.split(",").map((item, index) => (
+                <span key={index} className="note-tag">
+                  #{item}
+                </span>
+              ))
+            : null}
+        </div>
+        <div className="note-actions">
+          <MdCreate className="action-btn edit-btn" onClick={onEdit} />
+          <MdDelete className="action-btn delete-btn" onClick={onDelete} />
+        </div>
+      </div>
     </div>
   );
 };

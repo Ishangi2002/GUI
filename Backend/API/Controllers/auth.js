@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
 export const signup =(req, res) => {
-
+    
 //check exicting user
     const q = "SELECT * FROM user WHERE email =?";
     db.query(q,[req.body.email], (err,data) => {

@@ -1659,11 +1659,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ishangi\\Desktop\\noteapp_important\\notetakingapp_desktop\\notetakingapp_imp\\notetakingapp_imp.csproj",
+      "projectUniqueName": "C:\\Users\\Ishangi\\Desktop\\note-taking_application\\notetakingapp_desktop\\notetakingapp_imp\\notetakingapp_imp.csproj",
       "projectName": "notetakingapp_imp",
-      "projectPath": "C:\\Users\\Ishangi\\Desktop\\noteapp_important\\notetakingapp_desktop\\notetakingapp_imp\\notetakingapp_imp.csproj",
+      "projectPath": "C:\\Users\\Ishangi\\Desktop\\note-taking_application\\notetakingapp_desktop\\notetakingapp_imp\\notetakingapp_imp.csproj",
       "packagesPath": "C:\\Users\\Ishangi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ishangi\\Desktop\\noteapp_important\\notetakingapp_desktop\\notetakingapp_imp\\obj\\",
+      "outputPath": "C:\\Users\\Ishangi\\Desktop\\note-taking_application\\notetakingapp_desktop\\notetakingapp_imp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
