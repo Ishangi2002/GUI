@@ -71,7 +71,7 @@ const ProfilePage = () => {
       {/* Profile View Section */}
       {!isEditing && (
         <div className="profile-view-container">
-          <h2>Profile Information</h2>
+          <h2>UserProfile</h2>
           <div className="profile-box">
             <p><strong>Name:</strong> {userInfo.name}</p>
             <p><strong>Email:</strong> {userInfo.email}</p>
