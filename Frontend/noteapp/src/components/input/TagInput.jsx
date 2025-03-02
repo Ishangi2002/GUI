@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MdAdd, MdClose } from "react-icons/md";
-import "./TagInput.css"; // Import the regular CSS file
+import "./TagInput.css"; 
 
 const TagInput = ({ tags, setTags }) => {
   const [inputValue, setInputValue] = useState("");

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { LuCheck } from "react-icons/lu";
 import { MdDeleteOutline } from "react-icons/md";
-import './Toast.css'; // Import the regular CSS file
+import './Toast.css';
 
 const Toast = ({ isShown, message, type, onClose }) => {
 

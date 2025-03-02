@@ -11,8 +11,9 @@ const LandingPage = () => {
 
       <h1 className="title">Welcome to NoteMate!</h1>
 
-      <p className="subtitle">
-        Your personal note-taking companion. <br/>
+      <p className="subtitle1">
+        Your personal note-taking companion. <br/></p>
+        <p className="subtitle2">
         Organize your thoughts and ideas easily!
       </p>
 

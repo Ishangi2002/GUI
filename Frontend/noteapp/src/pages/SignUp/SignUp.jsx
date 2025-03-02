@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import PasswordInput from "../../components/input/passwordinput";
 import { validateEmail } from "../../utils/helper";
 import axiosInstance from "../../utils/axiosInstance";
-import "./SignUp.css"; // Import the regular CSS file
+import "./SignUp.css"; 
 
 const SignUp = () => {
     const [name, setName] = useState("");

@@ -1,16 +1,14 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom"; 
 import { getInitials } from "../../utils/helper";
 import "./ProfileInfo.css";
 
 const ProfileInfo = ({ userInfo, onLogout, onAvatarClick }) => {
-  const navigate = useNavigate(); // Initialize the navigate function
+  const navigate = useNavigate(); 
 
-  // Function to handle avatar click
   const handleAvatarClick = () => {
-    // You can add any logic here before navigating if needed
-    navigate("/profile"); // Navigate to the "Profile" page (or another container)
-    if (onAvatarClick) onAvatarClick(); // Optional callback for avatar click
+    navigate("/profile"); 
+    if (onAvatarClick) onAvatarClick(); 
   };
 
   return (

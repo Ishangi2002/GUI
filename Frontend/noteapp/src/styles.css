@@ -60,13 +60,13 @@ body {
 }
 
 .title-input {
-  font-size: 1.35rem;
+  font-size: 1rem;
   color: #0f172a;
   outline: none;
-  padding: 6px;;
+  padding: 8px;;
   border-radius: 4px;
   border: 1px solid #cbd5e1;
-  
+  font-weight: 600;
 }
 
 .content-input {

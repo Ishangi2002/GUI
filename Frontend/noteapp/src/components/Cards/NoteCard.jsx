@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdOutlinePushPin } from "react-icons/md";
 import { MdCreate, MdDelete } from "react-icons/md";
 import moment from "moment";
-import "./NoteCard.css"; // Import the regular CSS file
+import "./NoteCard.css"; 
 
 const NoteCard = ({
   title,
@@ -13,6 +13,13 @@ const NoteCard = ({
   onDelete,
   onPinNote,
 }) => {
+  const [isExpanded, setIsExpanded] = useState(false); //for expand
+
+  // Function to toggle the expanded state
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <div className="note-card">
       <div className="note-header">
@@ -20,9 +27,18 @@ const NoteCard = ({
           <h6 className="note-title">{title}</h6>
           <span className="note-date">{moment(date).format("Do MMM YYYY")}</span>
         </div>
-        {/* <MdOutlinePushPin className={`icon-btn ${isPinned ? 'text-primary' : 'text-slate-300'}`} onClick={onPinNote} /> */}
       </div>
-      <p className="note-content">{content?.slice(0, 60)}</p>
+      <p className="note-content">
+      <p className="note-content">
+      {isExpanded ? content : content?.slice(0, 100) + "..."}
+      </p>
+
+        {content?.length > 60 && ( 
+          <button className="see-more-btn" onClick={toggleExpand}>
+            {isExpanded ? "See Less" : "See More"}
+          </button>
+        )}
+      </p>
       <div className="note-footer">
         <div className="note-tags">
           {tags
