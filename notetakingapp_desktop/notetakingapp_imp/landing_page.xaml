@@ -16,21 +16,29 @@
             <!-- Welcome Title -->
             <Label Content="Welcome to NoteMate!" 
                    Foreground="#7321A6" 
-                   FontSize="40" 
-                   HorizontalAlignment="Center" 
+                   FontSize="35" 
+                   HorizontalAlignment="Left" 
+                   Margin="-70"
                    FontWeight="Bold" />
 
             <!-- Subtitle -->
-            <Label Content="Your personal note-taking companion. Organize your thoughts and ideas easily!" 
-                   Foreground="Gray" 
-                   FontSize="21" 
-                   HorizontalAlignment="Center" 
-                   FontWeight="Bold" 
-                   Margin="0,20,0,40" 
-                   MaxWidth="800" Width="882"  />
+            <Label Foreground="Gray" 
+       FontSize="21" 
+       HorizontalAlignment="Left" 
+       FontWeight="Bold" 
+       Margin="-75,20,0,40" 
+       MaxWidth="800" Width="882">
+                <TextBlock TextAlignment="Left">
+        <Run Text="  " /> 
+        <Run Text="Your personal note-taking companion." />
+        <LineBreak/>
+        <Run Text="" /> 
+        <Run Text="Organize your thoughts and ideas easily!" />
+                </TextBlock>
+            </Label>
 
             <!-- Buttons -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="354" >
                 <!-- Login Button -->
                 <Button x:Name="btnLogin" 
                         Click="openWindow1" 
@@ -41,7 +49,7 @@
                         Foreground="White" 
                         MouseEnter="btnLogin_MouseEnter" 
                         MouseLeave="btnLogin_MouseLeave"
-                        Margin="0 0 50 10">
+                        Margin="-380 0 50 10">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#7321A6" 
@@ -64,7 +72,7 @@
                         MouseEnter="btnSignUp_MouseEnter" 
                         MouseLeave="btnSignUp_MouseLeave" 
                         Click="OpenWindow2"
-                         Margin="0 0 50 10">
+                         Margin="-78 0 50 10">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="White" 
@@ -78,5 +86,7 @@
                 </Button>
             </StackPanel>
         </StackPanel>
+        <Image Source="Images/landingimage.png" Width="800" Height="900" Margin="650 10 0 10 "/>
+
     </Grid>
 </Window>

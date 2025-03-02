@@ -66,24 +66,24 @@ namespace notetakingapp_imp
 
                     if (response.IsSuccessStatusCode)
                     {
-                        // Read response as a string
+                        
                         string jsonResponse = await response.Content.ReadAsStringAsync();
 
-                        // Deserialize JSON into a collection of notes
+                        
                         var notesData = JsonConvert.DeserializeObject<ObservableCollection<Note>>(jsonResponse);
 
                         Notes.Clear();
 
                         foreach (var note in notesData)
                         {
-                            // Use the CreatedAt property for date handling
+                           
                             if (string.IsNullOrEmpty(note.CreatedAt))
                             {
                                 note.CreatedAt = "No Date Available";
                             }
                             else
                             {
-                                // Try to parse the CreatedAt date
+                                
                                 try
                                 {
                                     DateTime parsedDate = DateTime.Parse(note.CreatedAt, null, DateTimeStyles.RoundtripKind);
@@ -127,31 +127,29 @@ namespace notetakingapp_imp
 
         private async void click_Delete(object sender, RoutedEventArgs e)
         {
-            // Get the note from the clicked item (the DataContext of the Button)
+           
             var note = (sender as FrameworkElement).DataContext as Note;
 
             if (note != null)
             {
-                // Call the API to delete the note
+                //DeleteNotes API call
                 try
                 {
                     using (HttpClient client = new HttpClient())
                     {
-                        // Construct the delete URL
                         string apiUrl = $"http://localhost:8800/api/note/deleteNotes/{note.id}";
 
-                        // Send DELETE request
                         HttpResponseMessage response = await client.DeleteAsync(apiUrl);
 
                         if (response.IsSuccessStatusCode)
                         {
-                            // Remove the note from the ObservableCollection if deletion was successful
+                           
                             Notes.Remove(note);
                             MessageBox.Show("Note deleted successfully.");
                         }
                         else
                         {
-                            // If there's an error, display the error message
+                            
                             string errorMessage = await response.Content.ReadAsStringAsync();
                             MessageBox.Show($"Error: {errorMessage}");
                         }
@@ -159,7 +157,7 @@ namespace notetakingapp_imp
                 }
                 catch (Exception ex)
                 {
-                    // Handle any exceptions that occur during the API call
+                    
                     MessageBox.Show($"Error deleting note: {ex.Message}");
                 }
             }

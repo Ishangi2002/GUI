@@ -9,14 +9,14 @@
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.5*"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
 
         <!-- Centered Content -->
@@ -121,5 +121,7 @@
                 </StackPanel>
             </StackPanel>
         </Border>
+        <Image Source="Images/signup.png" Margin="51,64,66,52" Grid.Column="2" Grid.RowSpan="3"/>
+
     </Grid>
 </Window>
