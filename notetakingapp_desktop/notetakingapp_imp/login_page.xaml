@@ -27,7 +27,7 @@
                 Background="White" 
                 BorderBrush="#D9DDDC"
                 BorderThickness="1"
-                CornerRadius="10" Margin="1,27,50,165" Grid.RowSpan="2" Grid.Row="1" Grid.Column="1">
+                CornerRadius="10" Margin="1,27,50,180" Grid.RowSpan="2" Grid.Row="1" Grid.Column="1">
             <StackPanel>
                 <!-- Title -->
                 <Label Content="Login" 

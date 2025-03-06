@@ -3,6 +3,27 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Profile Page" Height="600" Width="900" Background="White"
         WindowState="Maximized" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <!-- Custom Button Style to Remove Hover Effect -->
+        <Style x:Key="NoHoverButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#7321a6"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+        </Style>
+    </Window.Resources>
     <Grid Margin="20">
         <!-- Welcome Message -->
         <TextBlock x:Name="WelcomeMessage" FontSize="40" FontWeight="Bold" Foreground="#7321a6"
@@ -17,15 +38,17 @@
         <!-- Profile View Section -->
         <StackPanel x:Name="ProfileViewSection" Visibility="Visible" HorizontalAlignment="Center"
                     VerticalAlignment="Top" Margin="0,280,0,0">
-            <Border BorderBrush="#DBE2E9" BorderThickness="1" Height="217" Width="422" CornerRadius="7">
-                <StackPanel Background="White" Margin="0,10,0,0" Width="400" Height="200">
+            <Border BorderBrush="#DBE2E9" BorderThickness="1" Height="378" Width="415" CornerRadius="7">
+                <StackPanel Background="White" Margin="7,39,9,1">
                     <TextBlock Text="User Profile" FontSize="24" FontWeight="Bold" Foreground="Black" Margin="0 0 10 0" Height="41" />
-                    <Border CornerRadius="3" BorderThickness="1" BorderBrush="#DBE2E9" Background="#F2F3F5">
-                        <StackPanel>
+                    <Border CornerRadius="3" BorderThickness="1" BorderBrush="#DBE2E9" Background="#F2F3F5" Height="238" Width="352">
+                        <StackPanel Margin="0,0,0,-38">
                             <TextBlock x:Name="UserNameText" FontSize="15" Margin="10"/>
                             <TextBlock x:Name="UserEmailText" FontSize="15" Margin="10"/>
-                            <Button Content="Edit Profile" Background="#7321a6" Foreground="White" Width="362" Height="31"
-                                    Margin="10,25,10,10" BorderThickness="0" Click="EditProfile_Click"/>
+                            <Button Content="Edit Profile" Style="{StaticResource NoHoverButtonStyle}" Width="316" Height="29"
+                                    Margin="10,55,10,10" Click="EditProfile_Click" FocusVisualStyle="{x:Null}"/>
+                            <Button Content="Delete Account" Style="{StaticResource NoHoverButtonStyle}" Background="red" Foreground="White" Width="315" Height="29"
+                                    Margin="10,0,10,10" Click="DeleteAccount_Click" FocusVisualStyle="{x:Null}"/>
                         </StackPanel>
                     </Border>
                 </StackPanel>
@@ -34,22 +57,30 @@
 
         <!-- Profile Edit Section -->
         <StackPanel x:Name="ProfileEditSection" Visibility="Collapsed" HorizontalAlignment="Center"
-                    VerticalAlignment="Top" Margin="0,250,0,0">
-            <TextBlock Text="Edit Profile" FontSize="24" FontWeight="Bold" Foreground="#7321a6" />
-            <StackPanel Background="White" Margin="0,10,0,0" Width="400" Height="250" VerticalAlignment="Center">
-                <TextBlock Text="Name" FontSize="15" Margin="10"/>
-                <TextBox x:Name="NameTextBox" Width="350" Height="30" Margin="10,5" />
+    VerticalAlignment="Top" Margin="0,250,0,0">
+            <Border BorderBrush="#DBE2E9" BorderThickness="1" Height="378" Width="415" CornerRadius="7" Background="White">
+                <StackPanel Background="#F2F3F5" Margin="10">
+                    <!-- Edit Profile Title -->
+                    <TextBlock Text="Edit Profile" FontSize="24" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Center" Margin="0,20,0,20"/>
 
-                <TextBlock Text="Email" FontSize="15" Margin="10"/>
-                <TextBox x:Name="EmailTextBox" Width="350" Height="30" Margin="10,5" />
+                    <!-- Name Section -->
+                    <TextBlock Text="Name" FontSize="15" Margin="10,0,10,5" Foreground="#333333"/>
+                    <TextBox x:Name="NameTextBox" Width="350" Height="30" Margin="10,0,10,10" Padding="5" BorderBrush="#DBE2E9" BorderThickness="1" />
 
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
-                    <Button Content="Save Changes" Background="#7321a6" Foreground="White" Width="150" Height="35"
-                            Margin="10,0" Click="SaveChanges_Click"/>
-                    <Button Content="Cancel" Background="Red" Foreground="White" Width="150" Height="35"
-                            Margin="10,0" Click="CancelEdit_Click"/>
+                    <!-- Email Section -->
+                    <TextBlock Text="Email" FontSize="15" Margin="10,0,10,5" Foreground="#333333"/>
+                    <TextBox x:Name="EmailTextBox" Width="350" Height="30" Margin="10,0,10,20" Padding="5" BorderBrush="#DBE2E9" BorderThickness="1" />
+
+                    <!-- Buttons Section -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,20">
+                        <Button Content="Save Changes" Style="{StaticResource NoHoverButtonStyle}" Background="#7321a6" Foreground="White" Width="150" Height="35"
+                    Margin="10,0" Click="SaveChanges_Click" FontSize="14" FontWeight="SemiBold"/>
+                        <Button Content="Cancel" Style="{StaticResource NoHoverButtonStyle}" Background="Red" Foreground="White" Width="150" Height="35"
+                    Margin="10,0" Click="CancelEdit_Click" FontSize="14" FontWeight="SemiBold"/>
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
+            </Border>
         </StackPanel>
+
     </Grid>
 </Window>

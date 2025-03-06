@@ -1,20 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Globalization;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using Newtonsoft.Json;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
 
 namespace notetakingapp_imp
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         private ObservableCollection<Note> Notes;
+        private string _loggedInUsername;
+
+        public string LoggedInUsername
+        {
+            get => _loggedInUsername;
+            set
+            {
+                _loggedInUsername = value;
+                OnPropertyChanged();
+            }
+        }
 
         public MainWindow()
         {
@@ -22,7 +33,17 @@ namespace notetakingapp_imp
             Notes = new ObservableCollection<Note>();
             NotesList.ItemsSource = Notes;
             LoadNotesAsync(UserSession.UserId);
-           
+
+            // Set the logged-in username
+            LoggedInUsername = UserSession.Name; 
+            DataContext = this; 
+        }
+
+        // Implement INotifyPropertyChanged
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)
@@ -36,12 +57,12 @@ namespace notetakingapp_imp
         {
             await LoadNotesAsync(UserSession.UserId);
         }
+
         private void ProfileButton_Click(object sender, RoutedEventArgs e)
         {
             ProfileWindow profileWindow = new ProfileWindow(UserSession.Name, UserSession.UserEmail);
             profileWindow.Show();
         }
-
 
         private void SearchTextBox_GotFocus(object sender, RoutedEventArgs e)
         {
@@ -59,7 +80,6 @@ namespace notetakingapp_imp
             }
         }
 
-        // Event handler for the "Add Note" button
         private void AddNoteButton_Click(object sender, RoutedEventArgs e)
         {
             AddNoteWindow addNoteWindow = new AddNoteWindow();
@@ -77,28 +97,23 @@ namespace notetakingapp_imp
 
                     if (response.IsSuccessStatusCode)
                     {
-                        
                         string jsonResponse = await response.Content.ReadAsStringAsync();
-
-                        
                         var notesData = JsonConvert.DeserializeObject<ObservableCollection<Note>>(jsonResponse);
 
                         Notes.Clear();
 
                         foreach (var note in notesData)
                         {
-                           
                             if (string.IsNullOrEmpty(note.CreatedAt))
                             {
                                 note.CreatedAt = "No Date Available";
                             }
                             else
                             {
-                                
                                 try
                                 {
                                     DateTime parsedDate = DateTime.Parse(note.CreatedAt, null, DateTimeStyles.RoundtripKind);
-                                    note.CreatedAt = parsedDate.ToString("dd MMM yyyy"); 
+                                    note.CreatedAt = parsedDate.ToString("dd MMM yyyy");
                                 }
                                 catch (FormatException)
                                 {
@@ -125,12 +140,11 @@ namespace notetakingapp_imp
 
         private void click_Edit(object sender, RoutedEventArgs e)
         {
-            
             var note = (sender as FrameworkElement).DataContext as Note;
 
             if (note != null)
             {
-                selectedNote = note;  
+                selectedNote = note;
                 var updateWindow = new UpdateWindow(selectedNote.id);
                 updateWindow.Show();
             }
@@ -138,12 +152,10 @@ namespace notetakingapp_imp
 
         private async void click_Delete(object sender, RoutedEventArgs e)
         {
-           
             var note = (sender as FrameworkElement).DataContext as Note;
 
             if (note != null)
             {
-                //DeleteNotes API call
                 try
                 {
                     using (HttpClient client = new HttpClient())
@@ -154,13 +166,11 @@ namespace notetakingapp_imp
 
                         if (response.IsSuccessStatusCode)
                         {
-                           
                             Notes.Remove(note);
                             MessageBox.Show("Note deleted successfully.");
                         }
                         else
                         {
-                            
                             string errorMessage = await response.Content.ReadAsStringAsync();
                             MessageBox.Show($"Error: {errorMessage}");
                         }
@@ -168,15 +178,10 @@ namespace notetakingapp_imp
                 }
                 catch (Exception ex)
                 {
-                    
                     MessageBox.Show($"Error deleting note: {ex.Message}");
                 }
             }
         }
 
     }
-
-
-
 }
-
