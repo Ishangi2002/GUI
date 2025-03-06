@@ -52,6 +52,24 @@ const ProfilePage = () => {
     }
   };
 
+  //Delete user 
+  const handleDelete = async () => {
+    const id = localStorage.getItem("id");
+
+    try {
+      const response = await axiosInstance.delete(`api/user/deleteUser/${id}`);
+      
+      if (response.status === 200) {
+        alert("Account deleted successfully!");
+        localStorage.clear(); // Clear user data from localStorage
+        navigate("/login"); // Redirect to login page after deletion
+      }
+    } catch (error) {
+      console.error("Error deleting user:", error.response?.data || error.message);
+      alert("Failed to delete account!");
+    }
+  };
+
   if (!userInfo) {
     return <div>Loading...</div>;
   }
@@ -76,6 +94,7 @@ const ProfilePage = () => {
             <p><strong>Name:</strong> {userInfo.name}</p>
             <p><strong>Email:</strong> {userInfo.email}</p>
             <button className="btn-primary" onClick={() => setIsEditing(true)}>Edit Profile</button>
+            <button className="btn-danger" onClick={handleDelete}> Delete Account</button>
           </div>
         </div>
       )}

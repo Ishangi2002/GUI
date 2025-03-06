@@ -13,9 +13,10 @@ namespace notetakingapp_imp
         public static int UserId { get; set; }
         public static string Token { get; set; }
         public static string Name { get; set; }
-        
+        public static string UserEmail { get; set; }
 
-  
+
+
 
         public static void Logout()
         {

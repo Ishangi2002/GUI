@@ -32,6 +32,17 @@ namespace notetakingapp_imp
             this.Close();
         }
 
+        private async void RefreshButton_Click(object sender, RoutedEventArgs e)
+        {
+            await LoadNotesAsync(UserSession.UserId);
+        }
+        private void ProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            ProfileWindow profileWindow = new ProfileWindow(UserSession.Name, UserSession.UserEmail);
+            profileWindow.Show();
+        }
+
+
         private void SearchTextBox_GotFocus(object sender, RoutedEventArgs e)
         {
             if (searchTextBox.Text == "Search Notes")

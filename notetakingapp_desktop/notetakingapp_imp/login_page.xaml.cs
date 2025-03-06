@@ -4,7 +4,6 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 
@@ -27,13 +26,6 @@ namespace notetakingapp_imp
         private void btnLogin_MouseLeave(object sender, MouseEventArgs e)
         {
             btnLogin.Background = Brushes.Violet;
-        }
-
-        private void OpenWindow1(object sender, RoutedEventArgs e)
-        {
-            MainWindow objSignUp_page = new MainWindow();
-            this.Visibility = Visibility.Hidden;
-            objSignUp_page.Show();
         }
 
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
@@ -85,7 +77,7 @@ namespace notetakingapp_imp
             string email = txtEmail.Text;
             string password = txtPassword.Text;
 
-            if (string.IsNullOrEmpty(email)  || email == "Email")
+            if (string.IsNullOrEmpty(email) || email == "Email")
             {
                 MessageBox.Show("Please enter the email.");
                 return;
@@ -117,12 +109,16 @@ namespace notetakingapp_imp
                     var responseData = JsonConvert.DeserializeObject<dynamic>(responseBody);
                     string token = responseData.token;
                     string name = responseData.name;
+                    string Email = responseData.email;
                     int userId = responseData.id;
 
-                    // Store data in UserSession
+                    // Store user details in UserSession
                     UserSession.UserId = userId;
                     UserSession.Token = token;
+                    UserSession.Name = name;
+                    UserSession.UserEmail = email;
 
+                    // Pass user details to MainWindow
                     MainWindow mainPage = new MainWindow();
                     mainPage.Show();
                     this.Close();
@@ -136,10 +132,6 @@ namespace notetakingapp_imp
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
-
         }
-
-
-
     }
 }

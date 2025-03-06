@@ -32,15 +32,16 @@
                     </TextBlock>
                     <TextBox x:Name="txtTitle" 
                  Foreground="#D6D6D6" 
-                 FontSize="20" 
+                 FontSize="18" 
+                 FontWeight="Medium"
                  HorizontalAlignment="Left" 
                  Margin="10 -5" 
                  Width="474" 
-                 BorderBrush="White" 
+                 BorderBrush="#D6D6D6" 
                  GotFocus="TitleBox_GotFocus" 
                  LostFocus="TitleBox_LostFocus"
                  Text="Do the Maths Assignment" 
-                 BorderThickness="0 0 0 0"/>
+                 BorderThickness="1"/>
 
                     <TextBlock 
                 Margin="15 15"
@@ -54,11 +55,11 @@
                  HorizontalAlignment="Left" 
                  Margin="20 -5" 
                  Width="474" 
-                 BorderBrush="White" 
+                 BorderBrush="#D6D6D6" 
                  GotFocus="ContentBox_GotFocus" 
                  LostFocus="ContentBox_LostFocus"
                  Text="Content" 
-                 BorderThickness="0 0 0 0"/>
+                 BorderThickness="0"/>
                     <TextBlock 
                 Margin="15 150"
                 FontSize="12">
