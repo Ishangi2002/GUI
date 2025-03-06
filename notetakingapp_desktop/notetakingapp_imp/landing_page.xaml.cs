@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace notetakingapp_imp
 {
-    /// <summary>
-    /// Interaction logic for landing_page.xaml
-    /// </summary>
+    
     public partial class landing_page : Window
     {
         public landing_page()
@@ -44,7 +42,6 @@ namespace notetakingapp_imp
             btnSignUp.Background = Brushes.White;
         }
 
-        //open the another window when button click
 
         private void openWindow1(object sender, RoutedEventArgs e)
         {

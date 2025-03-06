@@ -39,7 +39,6 @@ namespace notetakingapp_imp
             DataContext = this; 
         }
 
-        // Implement INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
@@ -104,23 +103,6 @@ namespace notetakingapp_imp
 
                         foreach (var note in notesData)
                         {
-                            if (string.IsNullOrEmpty(note.CreatedAt))
-                            {
-                                note.CreatedAt = "No Date Available";
-                            }
-                            else
-                            {
-                                try
-                                {
-                                    DateTime parsedDate = DateTime.Parse(note.CreatedAt, null, DateTimeStyles.RoundtripKind);
-                                    note.CreatedAt = parsedDate.ToString("dd MMM yyyy");
-                                }
-                                catch (FormatException)
-                                {
-                                    note.CreatedAt = "Invalid Date";
-                                }
-                            }
-
                             Notes.Add(note);
                         }
                     }

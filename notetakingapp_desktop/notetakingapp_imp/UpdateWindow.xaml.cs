@@ -1,19 +1,12 @@
-﻿using MySqlX.XDevAPI;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace notetakingapp_imp
 {
@@ -21,14 +14,71 @@ namespace notetakingapp_imp
     {
         private static readonly HttpClient client = new HttpClient();
         private int id;
+
         public UpdateWindow(int noteId)
         {
             InitializeComponent();
             id = noteId;
-            
-            
-            
+            Loaded += Window_Loaded;
         }
+
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Fetch the note details
+                var note = await GetNoteByIdAsync(id);
+
+                txtTitle.Text = note.Title;
+                txtContent.Text = note.Content;
+                txtTags.Text = note.Tags;
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "Note not found!")
+                {
+                    MessageBox.Show("Note not found!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    this.Close(); 
+                }
+                else
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private async Task<Note> GetNoteByIdAsync(int noteId)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                string url = $"http://localhost:8800/api/note/getNote/{noteId}";
+                HttpResponseMessage response = await client.GetAsync(url);
+
+                string jsonResponse = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"API Response: {jsonResponse}"); 
+
+                if (response.IsSuccessStatusCode)
+                {
+                    try
+                    {
+                        var note = JsonConvert.DeserializeObject<Note>(jsonResponse);
+                        if (note != null) return note;
+                    }
+                    catch
+                    {
+                        var notes = JsonConvert.DeserializeObject<List<Note>>(jsonResponse);
+                        if (notes != null && notes.Count > 0) return notes[0];
+                    }
+
+                    throw new Exception("Note not found!");
+                }
+                else
+                {
+                    throw new Exception($"Error retrieving note. Response: {jsonResponse}");
+                }
+            }
+        }
+
 
         private void TitleBox_GotFocus(object sender, RoutedEventArgs e)
         {
@@ -44,9 +94,10 @@ namespace notetakingapp_imp
             if (string.IsNullOrWhiteSpace(txtTitle.Text))
             {
                 txtTitle.Text = "Do the Maths Assignment";
-                txtTitle.Foreground = new SolidColorBrush(Colors.Gray);
+                txtTitle.Foreground = new SolidColorBrush(Colors.Black);
             }
         }
+
         private void ContentBox_GotFocus(object sender, RoutedEventArgs e)
         {
             if (txtContent.Text == "Content")
@@ -58,12 +109,13 @@ namespace notetakingapp_imp
 
         private void ContentBox_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtTags.Text))
+            if (string.IsNullOrWhiteSpace(txtContent.Text))
             {
-                txtTags.Text = "Content";
-                txtTags.Foreground = new SolidColorBrush(Colors.Gray);
+                txtContent.Text = "Content";
+                txtContent.Foreground = new SolidColorBrush(Colors.Black);
             }
         }
+
         private void TagBox_GotFocus(object sender, RoutedEventArgs e)
         {
             if (txtTags.Text == "Add tags")
@@ -78,9 +130,10 @@ namespace notetakingapp_imp
             if (string.IsNullOrWhiteSpace(txtTags.Text))
             {
                 txtTags.Text = "Add tags";
-                txtTags.Foreground = new SolidColorBrush(Colors.Gray);
+                txtTags.Foreground = new SolidColorBrush(Colors.Black);
             }
         }
+
         private async void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
             // Retrieve input values
@@ -100,8 +153,6 @@ namespace notetakingapp_imp
                 title = title,
                 content = content,
                 tagString = tags,
-                
-
             };
 
             try
@@ -112,7 +163,6 @@ namespace notetakingapp_imp
                     string json = JsonConvert.SerializeObject(note);
                     StringContent contentData = new StringContent(json, Encoding.UTF8, "application/json");
 
-                  
                     HttpResponseMessage response = await client.PutAsync(apiUrl, contentData);
 
                     if (response.IsSuccessStatusCode)
@@ -132,9 +182,15 @@ namespace notetakingapp_imp
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        // Define a Note class to deserialize the JSON response
+        public class Note
+        {
+            public int Id { get; set; }
+            public string Title { get; set; }
+            public string Content { get; set; }
+            public string Tags { get; set; }
+            public DateTime UpdatedAt { get; set; }
+        }
     }
-
-
-
 }
-

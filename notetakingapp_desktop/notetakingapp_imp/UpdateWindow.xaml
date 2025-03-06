@@ -30,7 +30,7 @@
 
                     </TextBlock>
                     <TextBox x:Name="txtTitle" 
-             Foreground="#D6D6D6" 
+             Foreground="Black" 
              FontSize="20" 
              HorizontalAlignment="Left" 
              Margin="10 -5" 
@@ -48,7 +48,7 @@
             <Run Text="*" Foreground="Red"/>
                     </TextBlock>
                     <TextBox x:Name="txtContent" 
-             Foreground="#D6D6D6" 
+             Foreground="Black" 
              FontSize="15" 
              HorizontalAlignment="Left" 
              Margin="20 -5" 
@@ -69,7 +69,7 @@
              Width="150"
              HorizontalAlignment="Left"
              BorderBrush="#D6D6D6"
-             Foreground="#D6D6D6"
+             Foreground="Black"
              GotFocus="TagBox_GotFocus" 
              LostFocus="TagBox_LostFocus"
              Text="Add tags"/>

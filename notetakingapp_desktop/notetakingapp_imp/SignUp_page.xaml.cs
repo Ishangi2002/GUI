@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace notetakingapp_imp
 {
-    /// <summary>
-    /// Interaction logic for SignUp_page.xaml
-    /// </summary>
     public partial class SignUp_page : Window
     {
         private static readonly HttpClient client = new HttpClient();
