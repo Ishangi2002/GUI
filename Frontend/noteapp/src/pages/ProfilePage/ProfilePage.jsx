@@ -61,8 +61,8 @@ const ProfilePage = () => {
       
       if (response.status === 200) {
         alert("Account deleted successfully!");
-        localStorage.clear(); // Clear user data from localStorage
-        navigate("/login"); // Redirect to login page after deletion
+        localStorage.clear(); 
+        navigate("/login"); 
       }
     } catch (error) {
       console.error("Error deleting user:", error.response?.data || error.message);
