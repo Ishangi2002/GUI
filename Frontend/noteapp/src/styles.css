@@ -8,14 +8,38 @@ body {
 .add-edit-notes-container {
   position: relative;
   width: 800px;
-  height: 500px;
+  max-width: 90%;
+  height: auto;
   background-color: white;
-  margin-left: 330px;
-  margin-right: 300px;
-  margin-top: 120px;
+  margin: 10% auto; 
   padding: 25px;
   border-radius: 6px;
 }
+
+@media screen and (max-width: 768px) {
+  .add-edit-notes-container {
+    width: 95%;
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  .submit-button {
+    width: 100%; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .add-edit-notes-container {
+    padding: 15px;
+    margin-top: 30px;
+  }
+
+  .title-input, .content-input {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+}
+
 
 .close-button {
   width: 40px;
@@ -94,12 +118,23 @@ body {
   border: none;
   cursor: pointer;
   margin-top: 20px;
-  width: 800px;
+  width: 100%; 
+  max-width: 800px; 
 }
 
-.submit-button:hover {
-  background-color: ;
+@media screen and (max-width: 768px) {
+  .submit-button {
+    width: 100%; 
+  }
 }
+
+@media screen and (max-width: 480px) {
+  .submit-button {
+    padding: 10px; 
+    font-size: 0.9rem; 
+  }
+}
+
 
 /* Home Page Styles */
 .container {

@@ -1,151 +1,228 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.profile-page-container {
+  background-color: transparent;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: gray;
+  font-size: 18px;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.back-icon {
+  font-size: 20px;
+}
+
+.welcome-message {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .line1 {
-    font-size: 40px; 
-    font-weight: bold;
-    color: #7321a6;
-    margin-left: 500px;
-    margin-top: 500px;
-  
-  }
-  
-  .line2 {
-    font-size: 25px;
-    color: #666;
-    margin-left: 392px;
-  }
+  font-size: 40px;
+  font-weight: bold;
+  color: #7321a6;
+  display: block;
+}
 
-  .profile-page-container{
-      background-color: transparent;
-      padding: 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin-top: 100px;  
-      margin-left: auto;
-      margin-right: auto;
-      height: 800px;
-      width: 100%;
-      border: none;
-      
-  }
-  
-  .profile-view-container,.profile-edit-container {
-    background-color: #f4f4f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 70px;
-    margin-left: 550px;
-    margin-right: 100px;
-    height: 330px;
-    width: 400px;
-  }
-  
-  .profile-box {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    height: 225px;
-  }
-  
-  strong {
-    color: #7321a6;
-  }
-  
-  p {
-    font-size: 15px;
-    margin: 10px 0;
-    margin-top: 20px;
-  }
+.line2 {
+  font-size: 25px;
+  color: #666;
+  font-weight: 700;
+  display: block;
+  margin-top: 10px;
+}
 
-  .btn-primary {
-    background-color: #7321a6;
-    color: white;
-    font-size: 1.125rem; 
-    padding: 0.75rem;
-    border-radius: 0.375rem;
-    height: 45px;
-    width: 350px;
-    border: none;
-    margin-top: 25px;
-    margin-left: 10px;
-   
-  }
+.profile-view-container,
+.profile-edit-container {
+  background-color: #f4f4f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  height: 350px;
+  margin-bottom: 20px;
+}
 
-  .back-button {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    color: gray;
-    font-size: 18px;
-    margin-bottom: 10px;
-    margin-left: 2px;
-    margin-top: -80px;
-  }
-  
-  .back-icon {
-    font-size: 20px;
-  }
-  
-  
-  .profile-box2 {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+.profile-box,
+.profile-box2 {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  height: 250px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.profile-box p {
+  font-size: 16px;
+  margin: 10px 10px;
+}
+
+strong {
+  color: #7321a6;
 }
 
 .profile-box2 input {
-    width: 100%; 
-    padding: 10px;
-    margin-top: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 350px;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
+
+.btn-primary,
+.btn-danger {
+  background-color: #7321a6;
+  color: white;
+  font-size: 15px;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  border: none;
+  width: 95%;
+  height: 40px;
+  margin-top: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+}
+
+.btn-danger:hover {
+  background-color: #c9302c;
+}
+
+.btn-danger:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(221, 44, 44, 0.5);
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.btn-primary1 {
+  background-color: #7321a6;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  flex: 1;
+  cursor: pointer;
   
-  .btn-secondary {
-    background-color: red;
-    color: white;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 8px;
-    margin-left: 140px;
-    cursor: pointer;
-  }
-  .btn-primary1 {
-    background-color: #7321a6;
-    color: white;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 8px;
-    margin-left: 25px;
-    cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: red;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .line1 {
+    font-size: 32px;
   }
 
-  /*Delete*/
+  .line2 {
+    font-size: 20px;
+  }
 
+  .profile-view-container,
+  .profile-edit-container {
+    max-width: 400px;
+    padding: 15px;
+  }
+
+  .btn-primary,
   .btn-danger {
-    background-color: #d9534f;
-    color: white;
-    font-size: 1.125rem;
-    padding: 0.75rem;
-    border-radius: 0.375rem;
-    height: 45px;
-    width: 350px;
-    border: none;
-    margin-top: 25px;
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+
+  .btn-primary1,
+  .btn-secondary {
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .line1 {
+    font-size: 24px;
+  }
+
+  .line2 {
+    font-size: 16px;
+  }
+
+  .profile-view-container,
+  .profile-edit-container {
+    max-width: 100%;
     margin-left: 10px;
-    cursor: pointer;
+    margin-right: 10px;
+    padding: 10px;
   }
-  
-  .btn-danger:hover {
-    background-color: #c9302c; 
+
+  .profile-box,
+  .profile-box2 {
+    padding: 10px;
   }
-  
-  .btn-danger:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(221, 44, 44, 0.5); 
+
+  .btn-primary,
+  .btn-danger {
+    font-size: 0.9rem;
+    padding: 0.5rem;
   }
-  
-  
-  
+
+  .edit-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-primary1,
+  .btn-secondary {
+    padding: 8px;
+    width: 100%;
+  }
+
+  .profile-box p {
+    font-size: 14px;
+  }
+
+  .profile-box2 input {
+    padding: 8px;
+  }
+
+}
