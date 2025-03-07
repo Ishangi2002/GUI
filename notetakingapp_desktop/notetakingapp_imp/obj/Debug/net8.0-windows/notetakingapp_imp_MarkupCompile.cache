@@ -8,13 +8,13 @@ C:\Users\Ishangi\Desktop\note-taking_application\notetakingapp_desktop\notetakin
 notetakingapp_imp
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP
 C:\Users\Ishangi\Desktop\note-taking_application\notetakingapp_desktop\notetakingapp_imp\App.xaml
 71118397569
 
-121761599686
-2071714450597
+20-488042034
+414-866066102
 AddNoteWindow.xaml;landing_page.xaml;login_page.xaml;MainWindow.xaml;ProfileWindow.xaml;SignUp_page.xaml;UpdateWindow.xaml;
 
-False
+True
 

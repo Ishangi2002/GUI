@@ -98,26 +98,31 @@ namespace notetakingapp_imp
 
         private async void DeleteAccount_Click(object sender, RoutedEventArgs e)
         {
-            int userId = UserSession.UserId;
-            string apiUrl = $"http://localhost:8800/api/user/deleteUser/{userId}";
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to delete your account? ", "Confirm Deletion", MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
-            try
+            if (result == MessageBoxResult.Yes)
             {
-                HttpResponseMessage response = await client.DeleteAsync(apiUrl);
+                int userId = UserSession.UserId;
+                string apiUrl = $"http://localhost:8800/api/user/deleteUser/{userId}";
 
-                if (response.IsSuccessStatusCode)
+                try
                 {
-                    MessageBox.Show("Account deleted successfully.");
-                    this.Close();
+                    HttpResponseMessage response = await client.DeleteAsync(apiUrl);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Account deleted successfully.");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete account: " + response.ReasonPhrase);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Failed to delete account: " + response.ReasonPhrase);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
             }
         }
     }

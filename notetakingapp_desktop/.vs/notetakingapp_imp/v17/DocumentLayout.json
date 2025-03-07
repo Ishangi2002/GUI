@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Ishangi\\Desktop\\note-taking_application\\notetakingapp_desktop\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{728F9740-AC57-49C6-BD91-BA7CA2E6AB0F}|notetakingapp_imp\\notetakingapp_imp.csproj|c:\\users\\ishangi\\desktop\\note-taking_application\\notetakingapp_desktop\\notetakingapp_imp\\profilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{728F9740-AC57-49C6-BD91-BA7CA2E6AB0F}|notetakingapp_imp\\notetakingapp_imp.csproj|solutionrelative:notetakingapp_imp\\profilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{728F9740-AC57-49C6-BD91-BA7CA2E6AB0F}|notetakingapp_imp\\notetakingapp_imp.csproj|c:\\users\\ishangi\\desktop\\note-taking_application\\notetakingapp_desktop\\notetakingapp_imp\\profilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{728F9740-AC57-49C6-BD91-BA7CA2E6AB0F}|notetakingapp_imp\\notetakingapp_imp.csproj|solutionrelative:notetakingapp_imp\\profilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{728F9740-AC57-49C6-BD91-BA7CA2E6AB0F}|notetakingapp_imp\\notetakingapp_imp.csproj|c:\\users\\ishangi\\desktop\\note-taking_application\\notetakingapp_desktop\\notetakingapp_imp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{728F9740-AC57-49C6-BD91-BA7CA2E6AB0F}|notetakingapp_imp\\notetakingapp_imp.csproj|solutionrelative:notetakingapp_imp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -39,6 +47,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ProfileWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Ishangi\\Desktop\\note-taking_application\\notetakingapp_desktop\\notetakingapp_imp\\ProfileWindow.xaml.cs",
+              "RelativeDocumentMoniker": "notetakingapp_imp\\ProfileWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Ishangi\\Desktop\\note-taking_application\\notetakingapp_desktop\\notetakingapp_imp\\ProfileWindow.xaml.cs",
+              "RelativeToolTip": "notetakingapp_imp\\ProfileWindow.xaml.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAUwGcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T18:13:18.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProfileWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Ishangi\\Desktop\\note-taking_application\\notetakingapp_desktop\\notetakingapp_imp\\ProfileWindow.xaml",
+              "RelativeDocumentMoniker": "notetakingapp_imp\\ProfileWindow.xaml",
+              "ToolTip": "C:\\Users\\Ishangi\\Desktop\\note-taking_application\\notetakingapp_desktop\\notetakingapp_imp\\ProfileWindow.xaml",
+              "RelativeToolTip": "notetakingapp_imp\\ProfileWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-07T18:13:16.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Ishangi\\Desktop\\note-taking_application\\notetakingapp_desktop\\notetakingapp_imp\\MainWindow.xaml",
               "RelativeDocumentMoniker": "notetakingapp_imp\\MainWindow.xaml",
@@ -50,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Note.cs",
               "DocumentMoniker": "C:\\Users\\Ishangi\\Desktop\\note-taking_application\\notetakingapp_desktop\\notetakingapp_imp\\Note.cs",
               "RelativeDocumentMoniker": "notetakingapp_imp\\Note.cs",
@@ -62,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Ishangi\\Desktop\\note-taking_application\\notetakingapp_desktop\\notetakingapp_imp\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "notetakingapp_imp\\MainWindow.xaml.cs",
@@ -74,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "AddNoteWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Ishangi\\Desktop\\note-taking_application\\notetakingapp_desktop\\notetakingapp_imp\\AddNoteWindow.xaml.cs",
               "RelativeDocumentMoniker": "notetakingapp_imp\\AddNoteWindow.xaml.cs",
@@ -86,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "UpdateWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Ishangi\\Desktop\\note-taking_application\\notetakingapp_desktop\\notetakingapp_imp\\UpdateWindow.xaml",
               "RelativeDocumentMoniker": "notetakingapp_imp\\UpdateWindow.xaml",
@@ -97,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "UpdateWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Ishangi\\Desktop\\note-taking_application\\notetakingapp_desktop\\notetakingapp_imp\\UpdateWindow.xaml.cs",
               "RelativeDocumentMoniker": "notetakingapp_imp\\UpdateWindow.xaml.cs",
